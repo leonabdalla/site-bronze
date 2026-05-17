@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "siteName": "Bronze Metal",
+    "tagline": "Ligas técnicas de bronze e cobre"
+  },
+  "nav": {
+    "home": "Início",
+    "company": "Empresa",
+    "products": "Produtos",
+    "applications": "Aplicações",
+    "industries": "Indústrias",
+    "catalogs": "Catálogos",
+    "contact": "Contato"
+  },
+  "header": {
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "switchLanguage": "Mudar idioma",
+    "languagePt": "Português",
+    "languageEn": "Inglês",
+    "callUs": "Ligar",
+    "emailUs": "Enviar e-mail",
+    "whatsapp": "WhatsApp"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Desde 1980 · ISO 9001",
+      "title": "Ligas de bronze e cobre com suporte técnico que acompanha o projeto.",
+      "subtitle": "Barras, buchas e perfis até 3.600 mm em ligas especiais — atendendo aeroespacial, offshore, injeção plástica, defesa e moldes.",
+      "ctaProducts": "Ver linha de produtos",
+      "ctaContact": "Falar com engenharia"
+    },
+    "productsSection": {
+      "eyebrow": "Famílias de ligas",
+      "title": "Oito famílias de ligas, especificadas para o que você precisa entregar.",
+      "viewAll": "Ver todos os produtos"
+    },
+    "industriesSection": {
+      "eyebrow": "Setores atendidos",
+      "title": "Onde nossas ligas trabalham todos os dias.",
+      "viewAll": "Conhecer indústrias"
+    },
+    "trust": {
+      "iso": "Certificação ISO 9001",
+      "years": "Mais de 45 anos de operação",
+      "support": "Suporte técnico de engenheiros metalúrgicos"
+    },
+    "cta": {
+      "title": "Tem um projeto em mente?",
+      "subtitle": "Compartilhe especificações, prazos e quantidades. Nossa equipe responde com recomendação técnica e estimativa.",
+      "button": "Solicitar contato"
+    }
+  },
+  "company": {
+    "title": "Sobre a Bronze Metal",
+    "lead": "Fundada em 1980, a Bronze Metal é fornecedora de ligas técnicas de bronze e cobre para a indústria nacional e internacional, com foco em desempenho, precisão e suporte de engenharia.",
+    "missionTitle": "Missão",
+    "mission": "Entregar ligas e suporte técnico que viabilizem projetos críticos de engenharia, com qualidade certificada e prazos confiáveis.",
+    "visionTitle": "Visão",
+    "vision": "Ser referência latino-americana em ligas especiais de bronze e cobre.",
+    "valuesTitle": "Valores",
+    "values": [
+      "Excelência metalúrgica",
+      "Compromisso com prazo",
+      "Transparência técnica",
+      "Parceria de longo prazo"
+    ],
+    "capabilitiesTitle": "Capacidade produtiva",
+    "capabilities": "Barras maciças, buchas e perfis fundidos em ligas especiais. Diâmetros até 3.600 mm para buchas. Suporte para especificações SAE, ASTM, AMS e UNS."
+  },
+  "products": {
+    "indexTitle": "Famílias de ligas",
+    "indexLead": "Oito famílias cobrem aplicações de alta resistência, condutividade elétrica e resistência à corrosão.",
+    "viewFamily": "Ver família",
+    "alloyHeading": "Ligas disponíveis",
+    "applicationsHeading": "Aplicações típicas",
+    "propertiesHeading": "Propriedades principais",
+    "specs": {
+      "code": "Código",
+      "uns": "UNS",
+      "sae": "SAE",
+      "astm": "ASTM",
+      "ams": "AMS",
+      "tensile": "Tensão de ruptura",
+      "hardness": "Dureza",
+      "thermal": "Condutividade térmica",
+      "melting": "Fusão"
+    },
+    "askForDatasheet": "Solicitar ficha técnica completa"
+  },
+  "industries": {
+    "title": "Indústrias atendidas",
+    "lead": "Nossas ligas entram em equipamentos críticos em ambientes severos — do solo marinho ao espaço."
+  },
+  "applications": {
+    "title": "Aplicações",
+    "lead": "Conheça onde cada família de ligas tem desempenho comprovado."
+  },
+  "catalogs": {
+    "title": "Catálogos técnicos",
+    "lead": "Solicite os catálogos por área de aplicação. Enviaremos o PDF para o e-mail informado.",
+    "requestButton": "Solicitar catálogo",
+    "dialog": {
+      "title": "Receber catálogo: {name}",
+      "description": "Informe seus dados que nossa equipe envia o catálogo em PDF para o seu e-mail.",
+      "submit": "Solicitar envio",
+      "cancel": "Cancelar"
+    }
+  },
+  "contact": {
+    "title": "Fale com a Bronze Metal",
+    "lead": "Conte o que está projetando — respondemos com recomendação técnica e cotação.",
+    "channelsTitle": "Canais diretos",
+    "addressTitle": "Endereço",
+    "hoursTitle": "Horário comercial",
+    "hours": "Segunda a sexta, das 8h às 17h"
+  },
+  "contactForm": {
+    "name": "Nome",
+    "namePlaceholder": "Seu nome completo",
+    "email": "E-mail",
+    "emailPlaceholder": "voce@empresa.com",
+    "phone": "Telefone",
+    "phonePlaceholder": "(11) 90000-0000",
+    "company": "Empresa",
+    "companyPlaceholder": "Onde você trabalha",
+    "message": "Mensagem",
+    "messagePlaceholder": "Quantidade, especificação, prazo, aplicação...",
+    "submit": "Enviar mensagem",
+    "submitting": "Abrindo seu e-mail...",
+    "success": "Pronto! Seu cliente de e-mail foi aberto com a mensagem preenchida — basta enviar.",
+    "errors": {
+      "required": "Campo obrigatório",
+      "email": "Informe um e-mail válido",
+      "minMessage": "Conte um pouco mais para que possamos ajudar"
+    }
+  },
+  "footer": {
+    "siteMap": "Navegação",
+    "company": "Empresa",
+    "legal": "Privacidade",
+    "rights": "Todos os direitos reservados.",
+    "address": "Endereço",
+    "iso": "Certificado ISO 9001"
+  },
+  "privacy": {
+    "title": "Política de privacidade",
+    "lead": "Como tratamos dados pessoais coletados neste site."
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "lead": "O endereço acessado não existe ou foi movido.",
+    "cta": "Ir para o início"
+  }
+}

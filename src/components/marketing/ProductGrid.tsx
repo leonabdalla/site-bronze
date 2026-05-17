@@ -1,0 +1,41 @@
+import { getLocale, getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import { productFamilies } from "@/data/products";
+import { Placeholder } from "@/components/ui/Placeholder";
+import { ArrowUpRight } from "lucide-react";
+
+export async function ProductGrid({ limit }: { limit?: number }) {
+  const t = await getTranslations("products");
+  const locale = (await getLocale()) as "pt" | "en";
+  const list = typeof limit === "number" ? productFamilies.slice(0, limit) : productFamilies;
+  return (
+    <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {list.map((family) => (
+        <li key={family.slug}>
+          <Link
+            href={{ pathname: "/produtos/[slug]", params: { slug: family.slug } }}
+            className="surface-card group block h-full overflow-hidden rounded-lg"
+          >
+            <Placeholder seed={family.slug} className="aspect-[4/3]" />
+            <div className="p-5">
+              <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-bronze-500">
+                {family.alloys.length}{" "}
+                {locale === "pt" ? "ligas" : "alloys"}
+              </span>
+              <h3 className="mt-2 text-lg font-semibold text-ink leading-snug">
+                {family.name[locale]}
+              </h3>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed">
+                {family.summary[locale]}
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-ink transition-colors group-hover:text-bronze-500">
+                {t("viewFamily")}
+                <ArrowUpRight size={14} aria-hidden />
+              </span>
+            </div>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}

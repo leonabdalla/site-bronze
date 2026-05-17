@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "siteName": "Bronze Metal",
+    "tagline": "Technical bronze and copper alloys"
+  },
+  "nav": {
+    "home": "Home",
+    "company": "Company",
+    "products": "Products",
+    "applications": "Applications",
+    "industries": "Industries",
+    "catalogs": "Catalogs",
+    "contact": "Contact"
+  },
+  "header": {
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language",
+    "languagePt": "Portuguese",
+    "languageEn": "English",
+    "callUs": "Call us",
+    "emailUs": "Email us",
+    "whatsapp": "WhatsApp"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Since 1980 · ISO 9001",
+      "title": "Bronze and copper alloys backed by engineering support that follows the project.",
+      "subtitle": "Bars, bushings, and profiles up to 3,600 mm in specialty alloys — serving aerospace, offshore, plastic injection, defense, and tooling.",
+      "ctaProducts": "Browse product lines",
+      "ctaContact": "Talk to engineering"
+    },
+    "productsSection": {
+      "eyebrow": "Alloy families",
+      "title": "Eight alloy families, specified for what you need to deliver.",
+      "viewAll": "View all products"
+    },
+    "industriesSection": {
+      "eyebrow": "Sectors served",
+      "title": "Where our alloys earn their keep every day.",
+      "viewAll": "Explore industries"
+    },
+    "trust": {
+      "iso": "ISO 9001 certified",
+      "years": "Over 45 years in operation",
+      "support": "Metallurgical engineering support"
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "subtitle": "Share specifications, deadlines, and quantities. Our team responds with a technical recommendation and estimate.",
+      "button": "Request contact"
+    }
+  },
+  "company": {
+    "title": "About Bronze Metal",
+    "lead": "Founded in 1980, Bronze Metal supplies technical bronze and copper alloys to industries at home and abroad, focused on performance, precision, and engineering support.",
+    "missionTitle": "Mission",
+    "mission": "Deliver alloys and technical support that enable critical engineering projects, with certified quality and reliable lead times.",
+    "visionTitle": "Vision",
+    "vision": "To be the Latin American reference for specialty bronze and copper alloys.",
+    "valuesTitle": "Values",
+    "values": [
+      "Metallurgical excellence",
+      "Commitment to deadlines",
+      "Technical transparency",
+      "Long-term partnership"
+    ],
+    "capabilitiesTitle": "Production capabilities",
+    "capabilities": "Solid bars, bushings, and cast profiles in specialty alloys. Bushing diameters up to 3,600 mm. Support for SAE, ASTM, AMS, and UNS specifications."
+  },
+  "products": {
+    "indexTitle": "Alloy families",
+    "indexLead": "Eight families cover high-strength, electrical conductivity, and corrosion-resistance applications.",
+    "viewFamily": "View family",
+    "alloyHeading": "Available alloys",
+    "applicationsHeading": "Typical applications",
+    "propertiesHeading": "Key properties",
+    "specs": {
+      "code": "Code",
+      "uns": "UNS",
+      "sae": "SAE",
+      "astm": "ASTM",
+      "ams": "AMS",
+      "tensile": "Tensile strength",
+      "hardness": "Hardness",
+      "thermal": "Thermal conductivity",
+      "melting": "Melting range"
+    },
+    "askForDatasheet": "Request full datasheet"
+  },
+  "industries": {
+    "title": "Industries served",
+    "lead": "Our alloys go into critical equipment in severe environments — from the seabed to outer space."
+  },
+  "applications": {
+    "title": "Applications",
+    "lead": "See where each alloy family has proven performance."
+  },
+  "catalogs": {
+    "title": "Technical catalogs",
+    "lead": "Request catalogs by application area. We will email the PDF to the address you provide.",
+    "requestButton": "Request catalog",
+    "dialog": {
+      "title": "Request catalog: {name}",
+      "description": "Share your details and our team will send the PDF catalog to your email.",
+      "submit": "Send request",
+      "cancel": "Cancel"
+    }
+  },
+  "contact": {
+    "title": "Contact Bronze Metal",
+    "lead": "Tell us what you're designing — we'll respond with a technical recommendation and quote.",
+    "channelsTitle": "Direct channels",
+    "addressTitle": "Address",
+    "hoursTitle": "Business hours",
+    "hours": "Monday to Friday, 8 AM to 5 PM"
+  },
+  "contactForm": {
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+55 11 90000-0000",
+    "company": "Company",
+    "companyPlaceholder": "Where you work",
+    "message": "Message",
+    "messagePlaceholder": "Quantity, specification, deadline, application...",
+    "submit": "Send message",
+    "submitting": "Opening your email client...",
+    "success": "Done — your email client opened with the message pre-filled. Just hit send.",
+    "errors": {
+      "required": "This field is required",
+      "email": "Please enter a valid email",
+      "minMessage": "Tell us a bit more so we can help"
+    }
+  },
+  "footer": {
+    "siteMap": "Navigation",
+    "company": "Company",
+    "legal": "Privacy",
+    "rights": "All rights reserved.",
+    "address": "Address",
+    "iso": "ISO 9001 certified"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "lead": "How we handle personal data collected on this site."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "lead": "The address you visited doesn't exist or has been moved.",
+    "cta": "Go home"
+  }
+}
