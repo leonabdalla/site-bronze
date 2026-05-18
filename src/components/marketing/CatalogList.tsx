@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Download, Mail } from "lucide-react";
+import { Mail, Lock } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { catalogs } from "@/data/catalogs";
 import { Button } from "@/components/ui/Button";
@@ -23,11 +23,10 @@ export function CatalogList() {
             key={catalog.slug}
             className="surface-card overflow-hidden rounded-lg flex flex-col"
           >
-            <a
-              href={catalog.pdf}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block aspect-[3/4] overflow-hidden bg-slate-100"
+            <button
+              type="button"
+              onClick={() => setOpenSlug(catalog.slug)}
+              className="group relative block aspect-[3/4] w-full overflow-hidden bg-slate-100 text-left"
               aria-label={catalog.name[locale]}
             >
               <Image
@@ -39,12 +38,13 @@ export function CatalogList() {
               />
               <div
                 aria-hidden
-                className="absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               />
-              <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-ink/85 px-3 py-1 text-[10px] font-mono uppercase tracking-[0.15em] text-paper backdrop-blur">
+              <div className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-3 py-1 text-[10px] font-mono uppercase tracking-[0.15em] text-paper backdrop-blur">
+                <Lock size={10} aria-hidden />
                 PDF
               </div>
-            </a>
+            </button>
             <div className="flex flex-1 flex-col p-5">
               <h3 className="text-lg font-semibold text-ink">
                 {catalog.name[locale]}
@@ -52,27 +52,16 @@ export function CatalogList() {
               <p className="mt-2 text-sm text-slate-600 leading-relaxed flex-1">
                 {catalog.description[locale]}
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <a
-                  href={catalog.pdf}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  download
-                  className="inline-flex h-9 items-center gap-2 rounded-full bg-ink px-4 text-xs font-medium text-paper hover:bg-ink-soft transition-colors"
-                >
-                  <Download size={14} aria-hidden />
-                  {locale === "pt" ? "Baixar PDF" : "Download PDF"}
-                </a>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setOpenSlug(catalog.slug)}
-                >
-                  <Mail size={14} aria-hidden />
-                  {t("requestButton")}
-                </Button>
-              </div>
+              <Button
+                type="button"
+                variant="primary"
+                size="sm"
+                className="mt-4 self-start"
+                onClick={() => setOpenSlug(catalog.slug)}
+              >
+                <Mail size={14} aria-hidden />
+                {t("requestButton")}
+              </Button>
             </div>
           </li>
         ))}
@@ -83,7 +72,6 @@ export function CatalogList() {
         onClose={() => setOpenSlug(null)}
         catalogSlug={open?.slug ?? ""}
         catalogName={open ? open.name[locale] : ""}
-        catalogPdf={open?.pdf ?? ""}
       />
     </>
   );

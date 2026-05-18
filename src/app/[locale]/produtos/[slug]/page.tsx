@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { LinkButton } from "@/components/ui/Button";
 import { SpecsTable } from "@/components/marketing/SpecsTable";
+import { Sparkles } from "lucide-react";
 import { productFamilies, productFamilyBySlug } from "@/data/products";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
@@ -86,21 +87,40 @@ export default async function ProductFamilyPage({
 
       <section className="py-20">
         <Container className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
-          <div>
-            <SectionEyebrow>{t("applicationsHeading")}</SectionEyebrow>
-            <h2 className="mt-3 text-2xl font-semibold text-ink">
-              {t("applicationsHeading")}
-            </h2>
-            <ul className="mt-5 flex flex-col gap-3">
-              {family.applications[loc].map((app) => (
-                <li key={app} className="flex items-start gap-3 text-sm text-slate-700">
-                  <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-bronze-100 text-bronze-700">
-                    <Check size={12} aria-hidden />
-                  </span>
-                  {app}
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-col gap-10">
+            <div>
+              <SectionEyebrow>
+                <Sparkles size={11} aria-hidden /> {loc === "pt" ? "Características" : "Characteristics"}
+              </SectionEyebrow>
+              <h2 className="mt-3 text-2xl font-semibold text-ink">
+                {loc === "pt" ? "Características da família" : "Family characteristics"}
+              </h2>
+              <ul className="mt-5 flex flex-col gap-3">
+                {family.characteristics[loc].map((c) => (
+                  <li key={c} className="flex items-start gap-3 text-sm text-slate-700">
+                    <span aria-hidden className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze-400" />
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <SectionEyebrow>{t("applicationsHeading")}</SectionEyebrow>
+              <h2 className="mt-3 text-2xl font-semibold text-ink">
+                {t("applicationsHeading")}
+              </h2>
+              <ul className="mt-5 flex flex-col gap-3">
+                {family.applications[loc].map((app) => (
+                  <li key={app} className="flex items-start gap-3 text-sm text-slate-700">
+                    <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-bronze-100 text-bronze-700">
+                      <Check size={12} aria-hidden />
+                    </span>
+                    {app}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div>

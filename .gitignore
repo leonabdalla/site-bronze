@@ -40,8 +40,9 @@ yarn-error.log*
 .idea/
 .vscode/
 
-# Local resource staging (PDFs etc. are deployed from public/)
+# Local resource staging (PDFs etc. — never served publicly)
 /resources/
+/scripts/_pdf_text/
 
 # typescript
 *.tsbuildinfo

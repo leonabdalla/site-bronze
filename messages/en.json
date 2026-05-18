@@ -101,7 +101,7 @@
   },
   "catalogs": {
     "title": "Technical catalogs",
-    "lead": "Request catalogs by application area. We will email the PDF to the address you provide.",
+    "lead": "Request catalogs by application area. Our team will email the PDF to the address you provide.",
     "requestButton": "Request catalog",
     "dialog": {
       "title": "Request catalog: {name}",
