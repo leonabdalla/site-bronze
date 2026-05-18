@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import { Mail, Lock } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { catalogs } from "@/data/catalogs";
 import { Button } from "@/components/ui/Button";
+import { CatalogCover } from "./CatalogCover";
 import { CatalogRequestDialog } from "./CatalogRequestDialog";
 
 export function CatalogList() {
@@ -26,21 +26,16 @@ export function CatalogList() {
             <button
               type="button"
               onClick={() => setOpenSlug(catalog.slug)}
-              className="group relative block aspect-[3/4] w-full overflow-hidden bg-slate-100 text-left"
+              className="group relative block aspect-[3/4] w-full overflow-hidden text-left"
               aria-label={catalog.name[locale]}
             >
-              <Image
-                src={catalog.cover}
-                alt={catalog.name[locale]}
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              <CatalogCover
+                slug={catalog.slug}
+                name={catalog.name[locale]}
+                locale={locale}
+                className="absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-105"
               />
-              <div
-                aria-hidden
-                className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              />
-              <div className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-3 py-1 text-[10px] font-mono uppercase tracking-[0.15em] text-paper backdrop-blur">
+              <div className="absolute right-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-paper/95 px-3 py-1 text-[10px] font-mono uppercase tracking-[0.15em] text-ink shadow-sm backdrop-blur">
                 <Lock size={10} aria-hidden />
                 PDF
               </div>
