@@ -18,6 +18,15 @@ export const industries: Industry[] = [
     image: "/images/industries/aeroespacial.jpg",
   },
   {
+    slug: "siderurgia",
+    name: { pt: "Siderurgia", en: "Steel industry" },
+    summary: {
+      pt: "Componentes para linhas de produção siderúrgica em alta temperatura.",
+      en: "Components for steel production lines at high temperature.",
+    },
+    image: "/images/industries/siderurgia.jpg",
+  },
+  {
     slug: "offshore",
     name: { pt: "Offshore", en: "Offshore" },
     summary: {
@@ -27,57 +36,48 @@ export const industries: Industry[] = [
     image: "/images/industries/offshore.jpg",
   },
   {
-    slug: "injecao-plastica",
-    name: { pt: "Injeção plástica", en: "Plastic injection" },
+    slug: "manutencao",
+    name: { pt: "Manutenção", en: "Maintenance" },
     summary: {
-      pt: "Moldes com alta troca térmica e vida útil prolongada.",
-      en: "Molds with high heat exchange and extended service life.",
+      pt: "Reposição e manutenção industrial de equipamentos rotativos.",
+      en: "Industrial maintenance and replacement of rotating equipment.",
     },
-    image: "/images/industries/injecao-plastica.jpg",
+    image: "/images/industries/manutencao.jpg",
   },
   {
-    slug: "defesa",
-    name: { pt: "Defesa", en: "Defense" },
+    slug: "solda-por-resistencia",
+    name: { pt: "Solda por resistência", en: "Resistance welding" },
     summary: {
-      pt: "Peças críticas com requisitos rigorosos de rastreabilidade.",
-      en: "Critical parts with strict traceability requirements.",
+      pt: "Eletrodos e ferramentas para solda por resistência de alta cadência.",
+      en: "Electrodes and tooling for high-cycle resistance welding.",
     },
-    image: "/images/industries/defesa.jpg",
+    image: "/images/industries/solda-por-resistencia.jpg",
   },
   {
-    slug: "moldes",
-    name: { pt: "Moldes e ferramentaria", en: "Tooling & molds" },
+    slug: "industria-plastica",
+    name: { pt: "Indústria plástica", en: "Plastic industry" },
     summary: {
-      pt: "Insertos, cavidades e eletrodos em ligas de alto desempenho.",
-      en: "Inserts, cavities, and electrodes in high-performance alloys.",
+      pt: "Moldes e insertos com alta condutividade térmica.",
+      en: "Molds and inserts with high thermal conductivity.",
     },
-    image: "/images/industries/moldes.jpg",
+    image: "/images/industries/industria-plastica.jpg",
   },
   {
-    slug: "naval",
-    name: { pt: "Naval", en: "Naval" },
+    slug: "conformacao",
+    name: { pt: "Dobra e conformação de tubos", en: "Tube bending & forming" },
     summary: {
-      pt: "Hélices, eixos e mancais expostos a água salgada.",
-      en: "Propellers, shafts, and bearings exposed to saltwater.",
+      pt: "Ferramental para dobra, expansão e conformação de tubos metálicos.",
+      en: "Tooling for bending, expansion, and forming of metal tubing.",
     },
-    image: "/images/industries/naval.jpg",
+    image: "/images/industries/conformacao.jpg",
   },
   {
-    slug: "energia",
-    name: { pt: "Energia", en: "Energy" },
+    slug: "pistoes-injecao",
+    name: { pt: "Pistões e injeção", en: "Pistons & injection" },
     summary: {
-      pt: "Aplicações em geração térmica, hidrelétrica e nuclear.",
-      en: "Applications in thermal, hydroelectric, and nuclear generation.",
+      pt: "Componentes para máquinas de fundição e injeção sob pressão.",
+      en: "Components for die casting and pressure injection machines.",
     },
-    image: "/images/industries/energia.jpg",
-  },
-  {
-    slug: "automotiva",
-    name: { pt: "Automotiva", en: "Automotive" },
-    summary: {
-      pt: "Buchas, mancais e contatos elétricos em sistemas críticos.",
-      en: "Bushings, bearings, and electrical contacts in critical systems.",
-    },
-    image: "/images/industries/automotiva.jpg",
+    image: "/images/industries/pistoes-injecao.jpg",
   },
 ];

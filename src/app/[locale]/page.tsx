@@ -20,12 +20,13 @@ export default async function HomePage({
   const tNav = await getTranslations("nav");
   const tLocale = (await getLocale()) as "pt" | "en";
 
+  const heroImage = "/images/hero/main.jpg";
   const slides = [
     {
       eyebrow: t("hero.eyebrow"),
       title: t("hero.title"),
       body: t("hero.subtitle"),
-      imageSeed: "hero-1",
+      image: heroImage,
     },
     {
       eyebrow: tLocale === "pt" ? "Engenharia metalúrgica" : "Metallurgical engineering",
@@ -37,7 +38,7 @@ export default async function HomePage({
         tLocale === "pt"
           ? "Equipe técnica orienta a escolha da liga, do tratamento e da geometria — antes da primeira peça."
           : "Our technical team guides alloy, treatment, and geometry choices — before the first part.",
-      imageSeed: "hero-2",
+      image: heroImage,
     },
     {
       eyebrow: tLocale === "pt" ? "Capacidade industrial" : "Industrial capacity",
@@ -49,7 +50,7 @@ export default async function HomePage({
         tLocale === "pt"
           ? "Fundição, usinagem e tratamento térmico para entregar peças prontas para montagem."
           : "Casting, machining, and heat treatment to deliver ready-to-assemble parts.",
-      imageSeed: "hero-3",
+      image: heroImage,
     },
   ];
 

@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { productFamilies } from "@/data/products";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { ArrowUpRight } from "lucide-react";
 
 export async function ProductGrid({ limit }: { limit?: number }) {
@@ -16,7 +16,15 @@ export async function ProductGrid({ limit }: { limit?: number }) {
             href={{ pathname: "/produtos/[slug]", params: { slug: family.slug } }}
             className="surface-card group block h-full overflow-hidden rounded-lg"
           >
-            <Placeholder seed={family.slug} className="aspect-[4/3]" />
+            <div className="relative aspect-[4/3] bg-slate-100">
+              <Image
+                src={family.image}
+                alt={family.name[locale]}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-contain p-6 transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
             <div className="p-5">
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-bronze-500">
                 {family.alloys.length}{" "}

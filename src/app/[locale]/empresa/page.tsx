@@ -1,10 +1,10 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ShieldCheck, Award, Building2, Factory } from "lucide-react";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { company } from "@/data/company";
-import { Placeholder } from "@/components/ui/Placeholder";
 
 export async function generateMetadata({
   params,
@@ -43,7 +43,15 @@ export default async function CompanyPage({
               <Stat icon={<ShieldCheck size={16} />} label="ISO 9001" value="✓" suffix={locale === "pt" ? "certificado" : "certified"} />
             </dl>
           </div>
-          <Placeholder seed="empresa-hero" className="aspect-[5/4] rounded-xl" />
+          <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
+            <Image
+              src="/images/hero/main.jpg"
+              alt={t("title")}
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-cover img-cohesive"
+            />
+          </div>
         </Container>
       </section>
 

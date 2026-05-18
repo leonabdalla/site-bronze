@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { getLocale } from "next-intl/server";
 import { industries } from "@/data/industries";
-import { Placeholder } from "@/components/ui/Placeholder";
 
 export async function IndustryGrid() {
   const locale = (await getLocale()) as "pt" | "en";
@@ -11,7 +11,15 @@ export async function IndustryGrid() {
           key={industry.slug}
           className="surface-card overflow-hidden rounded-lg"
         >
-          <Placeholder seed={`ind-${industry.slug}`} className="aspect-[3/2]" />
+          <div className="relative aspect-[3/2] bg-slate-100">
+            <Image
+              src={industry.image}
+              alt={industry.name[locale]}
+              fill
+              sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover img-cohesive"
+            />
+          </div>
           <div className="p-4">
             <h3 className="text-sm font-semibold text-ink">
               {industry.name[locale]}

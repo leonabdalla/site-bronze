@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { catalogs } from "@/data/catalogs";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { Button } from "@/components/ui/Button";
 import { CatalogRequestDialog } from "./CatalogRequestDialog";
 
@@ -18,11 +18,19 @@ export function CatalogList() {
     <>
       <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {catalogs.map((catalog) => (
-          <li key={catalog.slug} className="surface-card overflow-hidden rounded-lg flex flex-col">
-            <Placeholder
-              seed={`cat-${catalog.slug}`}
-              className="aspect-[3/4]"
-            />
+          <li
+            key={catalog.slug}
+            className="surface-card overflow-hidden rounded-lg flex flex-col"
+          >
+            <div className="relative aspect-[3/4] bg-slate-100">
+              <Image
+                src={catalog.cover}
+                alt={catalog.name[locale]}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover img-cohesive"
+              />
+            </div>
             <div className="flex flex-1 flex-col p-5">
               <h3 className="text-lg font-semibold text-ink">
                 {catalog.name[locale]}

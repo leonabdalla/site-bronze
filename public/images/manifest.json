@@ -1,0 +1,140 @@
+{
+  "generatedAt": "2026-05-17T23:58:26.229Z",
+  "assets": [
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_492d226bde6e4e409d3afafd9ac11ce4~mv2.jpg",
+      "to": "public/images/brand/logo.jpg",
+      "sha256": "5c4ac3c057076ea4f52334c73504b35e623539a10bfc6ef9359ad6e9378224c3"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_10ff0d054d4d40f09f34cf1d99f340f2~mv2.jpg",
+      "to": "public/images/brand/iso-9001.jpg",
+      "sha256": "0277938eaa4616518b8bf1c56386ef2368e7d658d19601446bffae66b981591e"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_f060c81813be4b60961fb70619d6ca17~mv2.jpg",
+      "to": "public/images/brand/45-years.jpg",
+      "sha256": "c50799a9e233a55d5e478bacb6fa1647b080d2d34d5c71348b2c4d89f886f9c8"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_a0cc96988c114ca5975abef7d1106da0~mv2.jpg",
+      "to": "public/images/hero/main.jpg",
+      "sha256": "44af2441bfeaf4643ab169b743297d4505bed62b99e6beb2b509c8e03a2195bb"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_ccf57c9c50894c8292568782f6a93b18~mv2.png",
+      "to": "public/images/products/ligas-de-bronze-aluminio.png",
+      "sha256": "9f38e26cf9ef65ce72e655dc6a20aad793aafe823676fd46206d3d17e1fcac4b"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_0e5e85bb6d204ded95a558c92bdea199~mv2.png",
+      "to": "public/images/products/ligas-de-bronze-aluminio-niquel.png",
+      "sha256": "95fa001672fa2e0afcdd206d0a8e88cd37d8c46c9e870477bdaf766d646795c4"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_e67c8f773e7444128180fbc17d25515f~mv2.jpg",
+      "to": "public/images/products/ligas-bronze-aluminio-zinco.jpg",
+      "sha256": "bb8fb7b758f546d02c4a1e76a15a0360bc57381113a857ba48e4ce643e09a184"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_bc6ed1db06c74330b8e15082428bdf0c~mv2.png",
+      "to": "public/images/products/ligas-de-cobre-berilio.png",
+      "sha256": "594835dd824678821a2e3596fc89f3771c7ba20174f087c311d4576101bafad2"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_9d4d9eb93d3c42b99336cfd7bb431b09~mv2.jpg",
+      "to": "public/images/products/ligas-de-cobre-cromo-niquel-silicio.jpg",
+      "sha256": "9cae98c68aec2d12815ef881b9895bfdc892156f4ee91f476ae874f081d0db67"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_2f41e8e4a823458c9a8297224afbc70b~mv2.png",
+      "to": "public/images/products/ligas-de-cobre-cromo-zirconio.png",
+      "sha256": "2520d0b6d58ec1b780fd20a61c1a0162fa3ecf9729f6c74d8e3062ff189203d1"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_8aaf330db036487eaa81035ba848054c~mv2.jpg",
+      "to": "public/images/products/ligas-de-cobre-niquel-berilio.jpg",
+      "sha256": "31aef9e47a83772536368a3f1ccef45b93c8fdc78608ccdc8057e9df16c4a722"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_bbd5977d793f409791cba5aeab16edba~mv2.jpg",
+      "to": "public/images/products/ligas-de-molibdenio.jpg",
+      "sha256": "e4311a07dde5eb0a9337dd0b2ca599454dffa96c2c166cd8bb314d9421d1dca1"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_2a1f7af8df944bb2ae1412fb1d49db05~mv2.jpg",
+      "to": "public/images/industries/aeroespacial.jpg",
+      "sha256": "38f1bb87e296f380b70b206f28b427f0ccee86bc0d59799c32e098976770ebb1"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_a97ac93fee1c4206b9aee277c5beacfa~mv2.jpg",
+      "to": "public/images/industries/siderurgia.jpg",
+      "sha256": "12dba682f5c7ca3d71d8f1ce55cdbaa9a5ec2bf35b678882db2507b73083b7b6"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_2865492e42734b2799d9146a8df3a283~mv2.jpeg",
+      "to": "public/images/industries/offshore.jpg",
+      "sha256": "5d04de54b595782f8c868c473fe82cd6b386507b538c795389c5a99f87812f30"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_553b196887b048ad9580b1f29318b7d2~mv2.jpg",
+      "to": "public/images/industries/manutencao.jpg",
+      "sha256": "6b945eaee182fa7afd2df16aa9455064ab847726d90dadb8188d92ff1d944530"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_42e80ef499f040f7b000edafa20f4ad8~mv2.jpg",
+      "to": "public/images/industries/solda-por-resistencia.jpg",
+      "sha256": "6cf7a2acb0bd6b225d46259249ca5e32b9b4a440074cd3d9b017dbb89c082cb0"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_b8496d09fa75430d949bca271572ede4~mv2.jpg",
+      "to": "public/images/industries/industria-plastica.jpg",
+      "sha256": "592c9dd8f4ca10bc3b1b714d7d0c71d5228399e9afe700c5661d0aabf2a4b38f"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_9e5bb8e59c1949d6bbd730ae40f08c44~mv2.jpg",
+      "to": "public/images/industries/conformacao.jpg",
+      "sha256": "dbb1c24078f9bf1c6b1f0879d4b776b04495f097901ee3abe8a979f7f9f2239a"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_d37bf7857e56458fa237c896eada6473~mv2.jpeg",
+      "to": "public/images/industries/pistoes-injecao.jpg",
+      "sha256": "34bc1d0bd5e80e70741c436586d97ecf3b1e7139ec673e1f98e8c48e1f2be10d"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_2e509b8f2490494da73cb11efa3fc5ec~mv2.jpg",
+      "to": "public/images/catalogs/pistao.jpg",
+      "sha256": "8152344afa040acdbbfeb232089af831982b4a12437c736287c645cea46e6587"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_8d4699fe32b7456bac468c6539076c2d~mv2.jpg",
+      "to": "public/images/catalogs/plastico.jpg",
+      "sha256": "8008368e497f959e28e1a637f52452096db59672165589aad928bceacabfb35e"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_6df248f6e3354fdb9c0b37c6b47df16e~mv2.jpg",
+      "to": "public/images/catalogs/solda.jpg",
+      "sha256": "2ed166f764bd74d17cc0a1a795d0cca5420ae40eafa0210c9fd06a80051ec64d"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_e01fc79e434a40ad8c74c2653a2d53f1~mv2.jpg",
+      "to": "public/images/catalogs/metais.jpg",
+      "sha256": "c67fceddf9928fd200667d0b84024fe2ab88f2b1788862bc70645abd9994649f"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_b95a0afb1f5f4021a4f3f2a3c6a4c23c~mv2.jpg",
+      "to": "public/images/catalogs/manutencao.jpg",
+      "sha256": "5e7959766bbb764e9596bababd1f6168fa55b7fee0afef640f9142c4be8e0914"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_b5efba8e2aad4f3da5d5759fd2fc1fc8~mv2.jpg",
+      "to": "public/images/catalogs/geral.jpg",
+      "sha256": "be934e3066788983232e81c8a7e155ab29be75eeb4e3c001189b5f4ccf2433ce"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/66fb6f_f87982a59c204c8fac51d69777a8e707~mv2.jpg",
+      "to": "public/images/catalogs/aco.jpg",
+      "sha256": "b5c3cf3d68b34a24fa51afdc0dd810a9006edc8127ff6c6ffbb75ea46fe13cf1"
+    }
+  ]
+}

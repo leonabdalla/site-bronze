@@ -1,15 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Placeholder } from "@/components/ui/Placeholder";
 
 type Slide = {
   eyebrow: string;
   title: string;
   body: string;
-  imageSeed: string;
+  image: string;
 };
 
 export function HeroCarousel({ slides }: { slides: Slide[] }) {
@@ -50,9 +50,13 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
               aria-label={`${idx + 1} / ${slides.length}`}
               className="relative min-w-0 flex-[0_0_100%]"
             >
-              <Placeholder
-                seed={slide.imageSeed}
-                className="absolute inset-0 img-cohesive"
+              <Image
+                src={slide.image}
+                alt=""
+                fill
+                priority={idx === 0}
+                sizes="100vw"
+                className="object-cover img-cohesive"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-ink/30" />
               <div className="container-prose relative grid min-h-[520px] items-center py-20 md:py-28">

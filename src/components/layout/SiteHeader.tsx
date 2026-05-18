@@ -17,7 +17,7 @@ export async function SiteHeader() {
           className="inline-flex items-center gap-3 text-ink"
           aria-label="Bronze Metal"
         >
-          <Logo className="h-8 w-auto" />
+          <Logo className="h-10 w-auto" />
           <span className="sr-only">Bronze Metal</span>
         </Link>
 

@@ -43,7 +43,7 @@ export const productFamilies: ProductFamily[] = [
       pt: "Família que combina alumínio com cobre para entregar tenacidade, dureza e resistência à corrosão. Indicada para componentes que trabalham sob carga, fricção e ambientes agressivos.",
       en: "A family combining aluminum with copper to deliver toughness, hardness, and corrosion resistance. Recommended for components working under load, friction, and aggressive environments.",
     },
-    image: "/images/products/ligas-de-bronze-aluminio.jpg",
+    image: "/images/products/ligas-de-bronze-aluminio.png",
     alloys: [
       {
         code: "BM 863",
@@ -124,7 +124,7 @@ export const productFamilies: ProductFamily[] = [
       pt: "A adição de níquel eleva a resistência mecânica e a estabilidade em meios marinhos severos, mantendo boa usinabilidade.",
       en: "Adding nickel raises mechanical strength and stability in severe marine environments while preserving machinability.",
     },
-    image: "/images/products/ligas-de-bronze-aluminio-niquel.jpg",
+    image: "/images/products/ligas-de-bronze-aluminio-niquel.png",
     alloys: [
       {
         code: "BM 955",
@@ -214,7 +214,7 @@ export const productFamilies: ProductFamily[] = [
       pt: "Após tratamento térmico, atinge resistência comparável a aços de alto carbono mantendo condutividade elétrica e térmica elevadas.",
       en: "After heat treatment, reaches strength comparable to high-carbon steels while keeping high electrical and thermal conductivity.",
     },
-    image: "/images/products/ligas-de-cobre-berilio.jpg",
+    image: "/images/products/ligas-de-cobre-berilio.png",
     alloys: [
       {
         code: "BM 172HT",
@@ -290,7 +290,7 @@ export const productFamilies: ProductFamily[] = [
       pt: "Equilíbrio entre dureza e condutividade em serviços de solda por resistência e moldes de alta produção.",
       en: "Balance between hardness and conductivity for resistance welding service and high-production molds.",
     },
-    image: "/images/products/ligas-de-cobre-cromo-zirconio.jpg",
+    image: "/images/products/ligas-de-cobre-cromo-zirconio.png",
     alloys: [
       {
         code: "BM 1815",

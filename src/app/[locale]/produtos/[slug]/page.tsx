@@ -2,10 +2,10 @@ import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check } from "lucide-react";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { LinkButton } from "@/components/ui/Button";
-import { Placeholder } from "@/components/ui/Placeholder";
 import { SpecsTable } from "@/components/marketing/SpecsTable";
 import { productFamilies, productFamilyBySlug } from "@/data/products";
 import { routing } from "@/i18n/routing";
@@ -71,7 +71,16 @@ export default async function ProductFamilyPage({
               </LinkButton>
             </div>
           </div>
-          <Placeholder seed={family.slug} className="aspect-[5/4] rounded-xl" />
+          <div className="relative aspect-[5/4] overflow-hidden rounded-xl bg-white">
+            <Image
+              src={family.image}
+              alt={family.name[loc]}
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-contain p-8"
+              priority
+            />
+          </div>
         </Container>
       </section>
 
