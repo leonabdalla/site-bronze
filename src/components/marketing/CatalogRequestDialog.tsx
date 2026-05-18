@@ -18,6 +18,7 @@ type Props = {
   onClose: () => void;
   catalogSlug: string;
   catalogName: string;
+  catalogPdf: string;
 };
 
 export function CatalogRequestDialog({
@@ -25,6 +26,7 @@ export function CatalogRequestDialog({
   onClose,
   catalogSlug,
   catalogName,
+  catalogPdf,
 }: Props) {
   const t = useTranslations();
   const locale = useLocale() as "pt" | "en";
@@ -60,6 +62,10 @@ export function CatalogRequestDialog({
   function onSubmit(values: CatalogRequestValues) {
     submitCatalogRequest(values, catalogName, locale);
     setSubmitted(true);
+    // Also offer immediate download — open the PDF in a new tab
+    if (catalogPdf && typeof window !== "undefined") {
+      window.open(catalogPdf, "_blank", "noopener,noreferrer");
+    }
   }
 
   function errorMessage(key?: string) {

@@ -40,6 +40,9 @@ yarn-error.log*
 .idea/
 .vscode/
 
+# Local resource staging (PDFs etc. are deployed from public/)
+/resources/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

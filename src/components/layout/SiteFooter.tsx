@@ -15,7 +15,7 @@ export async function SiteFooter() {
     <footer className="mt-24 border-t border-slate-200 bg-ink text-paper">
       <Container className="grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-4 flex flex-col gap-6">
-          <Logo className="h-12 w-auto" variant="dark" />
+          <Logo className="h-12 w-auto" variant="dark" />{/* dark variant */}
           <p className="text-sm text-paper/70 max-w-sm">
             {t("metadata.tagline")}.
           </p>

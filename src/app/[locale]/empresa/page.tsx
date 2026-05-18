@@ -1,9 +1,10 @@
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ShieldCheck, Award, Building2, Factory } from "lucide-react";
-
 import Image from "next/image";
+import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
+import { ShieldCheck, Building2, Factory } from "lucide-react";
+
 import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
+import { YearsStamp } from "@/components/marketing/YearsStamp";
 import { company } from "@/data/company";
 
 export async function generateMetadata({
@@ -24,6 +25,8 @@ export default async function CompanyPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("company");
+  const tTrust = await getTranslations("home.trust");
+  const loc = (await getLocale()) as "pt" | "en";
   const yearsActive = new Date().getFullYear() - company.foundedYear;
 
   return (
@@ -38,10 +41,16 @@ export default async function CompanyPage({
             <p className="mt-5 max-w-xl text-lg text-slate-600 leading-relaxed">
               {t("lead")}
             </p>
-            <dl className="mt-8 grid grid-cols-2 gap-6">
-              <Stat icon={<Award size={16} />} label={t("title")} value={`${yearsActive}+`} suffix={locale === "pt" ? "anos" : "years"} />
-              <Stat icon={<ShieldCheck size={16} />} label="ISO 9001" value="✓" suffix={locale === "pt" ? "certificado" : "certified"} />
-            </dl>
+            <div className="mt-8 flex flex-wrap items-center gap-5">
+              <YearsStamp locale={loc} size={132} />
+              <Image
+                src="/images/brand/iso-9001.jpg"
+                alt="ISO 9001"
+                width={132}
+                height={132}
+                className="h-32 w-32 object-contain"
+              />
+            </div>
           </div>
           <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
             <Image
@@ -69,7 +78,7 @@ export default async function CompanyPage({
           />
           <div>
             <span className="text-bronze-500" aria-hidden>
-              <Award size={22} />
+              <ShieldCheck size={22} />
             </span>
             <h2 className="mt-4 text-lg font-semibold text-ink">
               {t("valuesTitle")}
@@ -88,43 +97,49 @@ export default async function CompanyPage({
 
       <section className="border-t border-slate-200 bg-ink py-20 text-paper">
         <Container className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-center">
+          <div className="flex flex-col gap-6">
+            <SectionEyebrow>{tTrust("iso")}</SectionEyebrow>
+            <div className="surface-card flex items-center gap-5 rounded-2xl bg-paper p-6 text-ink md:max-w-md">
+              <Image
+                src="/images/brand/iso-9001.jpg"
+                alt="ISO 9001"
+                width={96}
+                height={96}
+                className="h-20 w-20 shrink-0 object-contain"
+              />
+              <div>
+                <div className="text-base font-semibold leading-tight">
+                  {tTrust("iso")}
+                </div>
+                <div className="mt-1 text-sm text-slate-600 leading-relaxed">
+                  {tTrust("isoSub")}
+                </div>
+              </div>
+            </div>
+            <div className="surface-card flex items-center gap-5 rounded-2xl bg-paper p-6 text-ink md:max-w-md">
+              <YearsStamp locale={loc} size={84} />
+              <div>
+                <div className="text-base font-semibold leading-tight">
+                  {tTrust("years", { years: yearsActive })}
+                </div>
+                <div className="mt-1 text-sm text-slate-600 leading-relaxed">
+                  {tTrust("yearsSub", { since: company.foundedYear })}
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div>
-            <SectionEyebrow>{t("capabilitiesTitle")}</SectionEyebrow>
-            <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-paper md:text-4xl">
+            <h2 className="text-balance text-3xl font-semibold tracking-tight text-paper md:text-4xl">
               {t("capabilitiesTitle")}
             </h2>
+            <p className="mt-5 text-pretty text-base text-paper/80 leading-relaxed md:text-lg">
+              {t("capabilities")}
+            </p>
           </div>
-          <p className="text-pretty text-base text-paper/80 leading-relaxed md:text-lg">
-            {t("capabilities")}
-          </p>
         </Container>
       </section>
     </>
-  );
-}
-
-function Stat({
-  icon,
-  label,
-  value,
-  suffix,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-  suffix: string;
-}) {
-  return (
-    <div className="surface-card rounded-lg p-5">
-      <span className="text-bronze-500" aria-hidden>
-        {icon}
-      </span>
-      <div className="mt-3 font-mono text-3xl font-semibold text-ink">
-        {value}{" "}
-        <span className="text-sm font-medium text-slate-500">{suffix}</span>
-      </div>
-      <span className="sr-only">{label}</span>
-    </div>
   );
 }
 

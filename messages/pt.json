@@ -42,8 +42,11 @@
     },
     "trust": {
       "iso": "Certificação ISO 9001",
-      "years": "Mais de 45 anos de operação",
-      "support": "Suporte técnico de engenheiros metalúrgicos"
+      "isoSub": "Gestão da qualidade",
+      "years": "{years} anos de operação",
+      "yearsSub": "Desde {since}",
+      "support": "Suporte técnico de engenheiros metalúrgicos",
+      "supportSub": "Especificação, tratamento e geometria"
     },
     "cta": {
       "title": "Tem um projeto em mente?",

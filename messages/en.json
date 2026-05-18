@@ -42,8 +42,11 @@
     },
     "trust": {
       "iso": "ISO 9001 certified",
-      "years": "Over 45 years in operation",
-      "support": "Metallurgical engineering support"
+      "isoSub": "Quality management system",
+      "years": "{years} years in operation",
+      "yearsSub": "Since {since}",
+      "support": "Metallurgical engineering support",
+      "supportSub": "Specification, treatment, and geometry"
     },
     "cta": {
       "title": "Have a project in mind?",

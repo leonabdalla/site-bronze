@@ -1,5 +1,5 @@
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, ShieldCheck, Wrench, Award } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Link } from "@/i18n/navigation";
 import { Container } from "@/components/ui/Container";
@@ -8,6 +8,7 @@ import { LinkButton } from "@/components/ui/Button";
 import { HeroCarousel } from "@/components/marketing/HeroCarousel";
 import { ProductGrid } from "@/components/marketing/ProductGrid";
 import { IndustryGrid } from "@/components/marketing/IndustryGrid";
+import { TrustStrip } from "@/components/marketing/TrustStrip";
 
 export default async function HomePage({
   params,
@@ -58,12 +59,8 @@ export default async function HomePage({
     <>
       <HeroCarousel slides={slides} />
 
-      <Container className="-mt-12 mb-16 relative z-10">
-        <div className="surface-card grid grid-cols-1 gap-px rounded-xl bg-slate-200 sm:grid-cols-3">
-          <Highlight icon={<ShieldCheck size={18} />} label={t("trust.iso")} />
-          <Highlight icon={<Award size={18} />} label={t("trust.years")} />
-          <Highlight icon={<Wrench size={18} />} label={t("trust.support")} />
-        </div>
+      <Container className="-mt-14 mb-16 relative z-10">
+        <TrustStrip />
       </Container>
 
       <section className="py-24">
@@ -135,13 +132,3 @@ export default async function HomePage({
   );
 }
 
-function Highlight({ icon, label }: { icon: React.ReactNode; label: string }) {
-  return (
-    <div className="flex items-center gap-3 bg-paper px-5 py-4 text-sm text-ink">
-      <span className="text-bronze-500" aria-hidden>
-        {icon}
-      </span>
-      <span className="font-medium">{label}</span>
-    </div>
-  );
-}

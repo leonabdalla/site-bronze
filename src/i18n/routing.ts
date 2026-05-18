@@ -12,8 +12,16 @@ export const routing = defineRouting({
       pt: "/produtos/[slug]",
       en: "/products/[slug]",
     },
+    "/produtos/[slug]/[alloy]": {
+      pt: "/produtos/[slug]/[alloy]",
+      en: "/products/[slug]/[alloy]",
+    },
     "/aplicacoes": { pt: "/aplicacoes", en: "/applications" },
     "/industrias": { pt: "/industrias", en: "/industries" },
+    "/industrias/[slug]": {
+      pt: "/industrias/[slug]",
+      en: "/industries/[slug]",
+    },
     "/catalogos": { pt: "/catalogos", en: "/catalogs" },
     "/contato": { pt: "/contato", en: "/contact" },
     "/privacidade": { pt: "/privacidade", en: "/privacy" },

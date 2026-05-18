@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { productFamilies } from "@/data/products";
+import { industries } from "@/data/industries";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://site-bronze.vercel.app";
 
@@ -36,6 +37,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
+    });
+    for (const alloy of family.alloys) {
+      entries.push({
+        url: `${BASE_URL}/produtos/${family.slug}/${alloy.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.75,
+      });
+      entries.push({
+        url: `${BASE_URL}/en/products/${family.slug}/${alloy.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.75,
+      });
+    }
+  }
+
+  for (const industry of industries) {
+    entries.push({
+      url: `${BASE_URL}/industrias/${industry.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    });
+    entries.push({
+      url: `${BASE_URL}/en/industries/${industry.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
     });
   }
 

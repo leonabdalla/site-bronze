@@ -153,7 +153,7 @@ export default async function ProductFamilyPage({
             {t("propertiesHeading")}
           </h2>
           <div className="mt-7">
-            <SpecsTable alloys={family.alloys} />
+            <SpecsTable alloys={family.alloys} familySlug={family.slug} />
           </div>
         </Container>
       </section>

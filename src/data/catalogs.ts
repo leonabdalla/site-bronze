@@ -5,6 +5,7 @@ export type Catalog = {
   name: Bilingual;
   description: Bilingual;
   cover: string;
+  pdf: string;
 };
 
 export const catalogs: Catalog[] = [
@@ -16,6 +17,7 @@ export const catalogs: Catalog[] = [
       en: "Alloys for pistons and engine components.",
     },
     cover: "/images/catalogs/pistao.jpg",
+    pdf: "/catalogs/pistao.pdf",
   },
   {
     slug: "plastico",
@@ -25,6 +27,7 @@ export const catalogs: Catalog[] = [
       en: "Alloys for plastic injection molds and tooling.",
     },
     cover: "/images/catalogs/plastico.jpg",
+    pdf: "/catalogs/plastico.pdf",
   },
   {
     slug: "solda",
@@ -34,6 +37,7 @@ export const catalogs: Catalog[] = [
       en: "Alloys for welding electrodes and equipment.",
     },
     cover: "/images/catalogs/solda.jpg",
+    pdf: "/catalogs/solda.pdf",
   },
   {
     slug: "metais",
@@ -43,6 +47,7 @@ export const catalogs: Catalog[] = [
       en: "Overview of Bronze Metal alloys.",
     },
     cover: "/images/catalogs/metais.jpg",
+    pdf: "/catalogs/metais.pdf",
   },
   {
     slug: "manutencao",
@@ -52,6 +57,7 @@ export const catalogs: Catalog[] = [
       en: "Alloys for industrial maintenance and replacement parts.",
     },
     cover: "/images/catalogs/manutencao.jpg",
+    pdf: "/catalogs/manutencao.pdf",
   },
   {
     slug: "geral",
@@ -61,6 +67,7 @@ export const catalogs: Catalog[] = [
       en: "General catalog covering the full line.",
     },
     cover: "/images/catalogs/geral.jpg",
+    pdf: "/catalogs/geral.pdf",
   },
   {
     slug: "aco",
@@ -70,5 +77,6 @@ export const catalogs: Catalog[] = [
       en: "Complementary alloys for use alongside special steels.",
     },
     cover: "/images/catalogs/aco.jpg",
+    pdf: "/catalogs/aco.pdf",
   },
 ];

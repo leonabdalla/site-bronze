@@ -5,6 +5,7 @@ export type Industry = {
   name: Bilingual;
   summary: Bilingual;
   image: string;
+  relatedFamilies: string[];
 };
 
 export const industries: Industry[] = [
@@ -16,6 +17,11 @@ export const industries: Industry[] = [
       en: "Components operating under severe thermal and mechanical cycles.",
     },
     image: "/images/industries/aeroespacial.jpg",
+    relatedFamilies: [
+      "ligas-de-bronze-aluminio-niquel",
+      "ligas-de-cobre-berilio",
+      "ligas-de-molibdenio",
+    ],
   },
   {
     slug: "siderurgia",
@@ -25,6 +31,7 @@ export const industries: Industry[] = [
       en: "Components for steel production lines at high temperature.",
     },
     image: "/images/industries/siderurgia.jpg",
+    relatedFamilies: ["ligas-de-bronze-aluminio", "ligas-de-molibdenio"],
   },
   {
     slug: "offshore",
@@ -34,6 +41,10 @@ export const industries: Industry[] = [
       en: "Marine corrosion resistance in oil and gas fields.",
     },
     image: "/images/industries/offshore.jpg",
+    relatedFamilies: [
+      "ligas-de-bronze-aluminio",
+      "ligas-de-bronze-aluminio-niquel",
+    ],
   },
   {
     slug: "manutencao",
@@ -43,6 +54,10 @@ export const industries: Industry[] = [
       en: "Industrial maintenance and replacement of rotating equipment.",
     },
     image: "/images/industries/manutencao.jpg",
+    relatedFamilies: [
+      "ligas-de-bronze-aluminio",
+      "ligas-bronze-aluminio-zinco",
+    ],
   },
   {
     slug: "solda-por-resistencia",
@@ -52,6 +67,10 @@ export const industries: Industry[] = [
       en: "Electrodes and tooling for high-cycle resistance welding.",
     },
     image: "/images/industries/solda-por-resistencia.jpg",
+    relatedFamilies: [
+      "ligas-de-cobre-cromo-zirconio",
+      "ligas-de-cobre-cromo-niquel-silicio",
+    ],
   },
   {
     slug: "industria-plastica",
@@ -61,6 +80,11 @@ export const industries: Industry[] = [
       en: "Molds and inserts with high thermal conductivity.",
     },
     image: "/images/industries/industria-plastica.jpg",
+    relatedFamilies: [
+      "ligas-de-cobre-berilio",
+      "ligas-de-cobre-cromo-niquel-silicio",
+      "ligas-de-cobre-cromo-zirconio",
+    ],
   },
   {
     slug: "conformacao",
@@ -70,6 +94,10 @@ export const industries: Industry[] = [
       en: "Tooling for bending, expansion, and forming of metal tubing.",
     },
     image: "/images/industries/conformacao.jpg",
+    relatedFamilies: [
+      "ligas-de-bronze-aluminio",
+      "ligas-de-bronze-aluminio-niquel",
+    ],
   },
   {
     slug: "pistoes-injecao",
@@ -79,5 +107,14 @@ export const industries: Industry[] = [
       en: "Components for die casting and pressure injection machines.",
     },
     image: "/images/industries/pistoes-injecao.jpg",
+    relatedFamilies: [
+      "ligas-de-cobre-berilio",
+      "ligas-de-cobre-cromo-niquel-silicio",
+      "ligas-de-bronze-aluminio-niquel",
+    ],
   },
 ];
+
+export const industryBySlug = new Map(
+  industries.map((i) => [i.slug, i] as const),
+);
