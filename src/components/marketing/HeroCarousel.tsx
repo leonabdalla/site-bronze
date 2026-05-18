@@ -59,7 +59,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
                 className="object-cover img-cohesive"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/80 to-ink/30" />
-              <div className="container-prose relative grid min-h-[520px] items-center py-20 md:py-28">
+              <div className="container-prose relative grid min-h-[560px] items-center pt-20 pb-40 md:min-h-[600px] md:pt-28 md:pb-44">
                 <div className="max-w-2xl">
                   <span className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.18em] text-bronze-300">
                     <span aria-hidden className="h-px w-6 bg-bronze-300" />
@@ -78,40 +78,42 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
         </div>
       </div>
 
-      <div className="container-prose flex items-center justify-between gap-4 pb-8">
-        <div className="flex gap-1.5" role="tablist" aria-label="Hero slides">
-          {slides.map((_, idx) => (
+      {/* Controls floating over the slide, above any overlapping content below */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-28 z-20 md:bottom-32">
+        <div className="container-prose pointer-events-auto flex items-center justify-between gap-4">
+          <div className="flex gap-1.5" role="tablist" aria-label="Hero slides">
+            {slides.map((_, idx) => (
+              <button
+                key={idx}
+                role="tab"
+                aria-selected={idx === selected}
+                onClick={() => embla?.scrollTo(idx)}
+                className={`h-1 rounded-full transition-all ${
+                  idx === selected ? "w-10 bg-bronze-400" : "w-6 bg-paper/30 hover:bg-paper/50"
+                }`}
+              >
+                <span className="sr-only">{`Slide ${idx + 1}`}</span>
+              </button>
+            ))}
+          </div>
+          <div className="flex items-center gap-2">
             <button
-              key={idx}
-              role="tab"
-              aria-selected={idx === selected}
-              aria-controls={`hero-slide-${idx}`}
-              onClick={() => embla?.scrollTo(idx)}
-              className={`h-1 rounded-full transition-all ${
-                idx === selected ? "w-10 bg-bronze-400" : "w-6 bg-paper/30 hover:bg-paper/50"
-              }`}
+              type="button"
+              onClick={() => embla?.scrollPrev()}
+              aria-label="Previous slide"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper/25 bg-ink/40 text-paper backdrop-blur-sm transition-colors hover:bg-ink/70"
             >
-              <span className="sr-only">{`Slide ${idx + 1}`}</span>
+              <ChevronLeft size={18} aria-hidden />
             </button>
-          ))}
-        </div>
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => embla?.scrollPrev()}
-            aria-label="Previous slide"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper/20 text-paper hover:bg-paper/10"
-          >
-            <ChevronLeft size={18} aria-hidden />
-          </button>
-          <button
-            type="button"
-            onClick={() => embla?.scrollNext()}
-            aria-label="Next slide"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper/20 text-paper hover:bg-paper/10"
-          >
-            <ChevronRight size={18} aria-hidden />
-          </button>
+            <button
+              type="button"
+              onClick={() => embla?.scrollNext()}
+              aria-label="Next slide"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-paper/25 bg-ink/40 text-paper backdrop-blur-sm transition-colors hover:bg-ink/70"
+            >
+              <ChevronRight size={18} aria-hidden />
+            </button>
+          </div>
         </div>
       </div>
     </section>

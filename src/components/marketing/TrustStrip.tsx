@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { Wrench } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import { company } from "@/data/company";
 import { YearsStamp } from "./YearsStamp";
+import { IsoStamp } from "./IsoStamp";
 
 export async function TrustStrip() {
   const t = await getTranslations("home.trust");
@@ -11,15 +11,7 @@ export async function TrustStrip() {
   return (
     <div className="surface-card grid grid-cols-1 overflow-hidden rounded-2xl bg-paper sm:grid-cols-3">
       <Card
-        media={
-          <Image
-            src="/images/brand/iso-9001.jpg"
-            alt="ISO 9001"
-            width={120}
-            height={120}
-            className="h-20 w-20 object-contain"
-          />
-        }
+        media={<IsoStamp locale={locale} size={84} />}
         title={t("iso")}
         sub={t("isoSub")}
       />

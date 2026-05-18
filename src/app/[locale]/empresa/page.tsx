@@ -5,6 +5,7 @@ import { ShieldCheck, Building2, Factory } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { YearsStamp } from "@/components/marketing/YearsStamp";
+import { IsoStamp } from "@/components/marketing/IsoStamp";
 import { company } from "@/data/company";
 
 export async function generateMetadata({
@@ -43,13 +44,7 @@ export default async function CompanyPage({
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-5">
               <YearsStamp locale={loc} size={132} />
-              <Image
-                src="/images/brand/iso-9001.jpg"
-                alt="ISO 9001"
-                width={132}
-                height={132}
-                className="h-32 w-32 object-contain"
-              />
+              <IsoStamp locale={loc} size={132} />
             </div>
           </div>
           <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
@@ -100,13 +95,7 @@ export default async function CompanyPage({
           <div className="flex flex-col gap-6">
             <SectionEyebrow>{tTrust("iso")}</SectionEyebrow>
             <div className="surface-card flex items-center gap-5 rounded-2xl bg-paper p-6 text-ink md:max-w-md">
-              <Image
-                src="/images/brand/iso-9001.jpg"
-                alt="ISO 9001"
-                width={96}
-                height={96}
-                className="h-20 w-20 shrink-0 object-contain"
-              />
+              <IsoStamp locale={loc} size={84} />
               <div>
                 <div className="text-base font-semibold leading-tight">
                   {tTrust("iso")}
