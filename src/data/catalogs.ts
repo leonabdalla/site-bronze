@@ -9,6 +9,15 @@ export type Catalog = {
 
 export const catalogs: Catalog[] = [
   {
+    slug: "geral",
+    name: { pt: "Geral", en: "General" },
+    description: {
+      pt: "Catálogo geral com toda a linha de ligas Bronze Metal.",
+      en: "General catalog covering the full Bronze Metal alloy line.",
+    },
+    cover: "/images/catalogs/geral.jpg",
+  },
+  {
     slug: "pistao",
     name: { pt: "Pistão", en: "Piston" },
     description: {
@@ -39,8 +48,8 @@ export const catalogs: Catalog[] = [
     slug: "metais",
     name: { pt: "Metais", en: "Metals" },
     description: {
-      pt: "Visão geral das ligas Bronze Metal.",
-      en: "Overview of Bronze Metal alloys.",
+      pt: "Visão geral das ligas para conformação de metais.",
+      en: "Overview of alloys for metal forming.",
     },
     cover: "/images/catalogs/metais.jpg",
   },
@@ -52,15 +61,6 @@ export const catalogs: Catalog[] = [
       en: "Alloys for industrial maintenance and replacement parts.",
     },
     cover: "/images/catalogs/manutencao.jpg",
-  },
-  {
-    slug: "geral",
-    name: { pt: "Geral", en: "General" },
-    description: {
-      pt: "Catálogo geral com toda a linha.",
-      en: "General catalog covering the full line.",
-    },
-    cover: "/images/catalogs/geral.jpg",
   },
   {
     slug: "aco",

@@ -89,20 +89,31 @@ export function CatalogCover({ slug, name, locale = "pt", className = "" }: Prop
         <line x1="0" y1="14" x2="34" y2="14" stroke={colors.accent} strokeWidth="2" />
       </g>
 
-      {/* Big catalog name */}
-      <g transform="translate(28, 168)">
-        <text
-          x="0"
-          y="0"
-          fill="#ffffff"
-          fontFamily="var(--font-inter), Inter, system-ui, sans-serif"
-          fontSize="46"
-          fontWeight="800"
-          letterSpacing="-0.5"
-        >
-          {name}
-        </text>
-      </g>
+      {/* Big catalog name — auto-scale to fit max width */}
+      {(() => {
+        const MAX_W = 244;
+        const BASE = 46;
+        // Approx glyph width for Inter Bold ≈ 0.58 × fontSize.
+        const estWidth = name.length * BASE * 0.58;
+        const fontSize = estWidth > MAX_W ? Math.max(26, (BASE * MAX_W) / estWidth) : BASE;
+        return (
+          <g transform="translate(28, 168)">
+            <text
+              x="0"
+              y="0"
+              fill="#ffffff"
+              fontFamily="var(--font-inter), Inter, system-ui, sans-serif"
+              fontSize={fontSize}
+              fontWeight="800"
+              letterSpacing="-0.5"
+              textLength={Math.min(estWidth, MAX_W)}
+              lengthAdjust="spacingAndGlyphs"
+            >
+              {name}
+            </text>
+          </g>
+        );
+      })()}
 
       {/* Sub-hint */}
       <g transform="translate(28, 210)">
