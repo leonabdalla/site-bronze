@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "siteName": "Bronze Metal",
+    "tagline": "技术型青铜与铜合金"
+  },
+  "nav": {
+    "home": "首页",
+    "company": "公司",
+    "products": "产品",
+    "applications": "应用",
+    "industries": "行业",
+    "catalogs": "目录",
+    "contact": "联系我们"
+  },
+  "header": {
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单",
+    "switchLanguage": "切换语言",
+    "languagePt": "葡萄牙语",
+    "languageEn": "英语",
+    "languageEs": "西班牙语",
+    "languageZh": "中文",
+    "callUs": "致电",
+    "emailUs": "发送邮件",
+    "whatsapp": "WhatsApp"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "始于1980 · ISO 9001认证",
+      "title": "提供贯穿项目全程的工程支持的青铜与铜合金。",
+      "subtitle": "棒材、轴套及型材最大可达3,600毫米——服务于航空航天、海洋工程、塑料注塑、国防与模具行业。",
+      "ctaProducts": "查看产品线",
+      "ctaContact": "联系工程团队"
+    },
+    "productsSection": {
+      "eyebrow": "合金家族",
+      "title": "八大合金家族,精准匹配您的交付需求。",
+      "viewAll": "查看所有产品"
+    },
+    "industriesSection": {
+      "eyebrow": "服务行业",
+      "title": "我们的合金每天在哪里发挥作用。",
+      "viewAll": "了解行业"
+    },
+    "trust": {
+      "iso": "ISO 9001认证",
+      "isoSub": "质量管理体系",
+      "years": "{years}年运营经验",
+      "yearsSub": "始于{since}年",
+      "support": "冶金工程师技术支持",
+      "supportSub": "规格、处理与几何"
+    },
+    "cta": {
+      "title": "有项目正在策划?",
+      "subtitle": "分享规格、交期与数量。我们的团队将提供技术建议与报价。",
+      "button": "请求联系"
+    }
+  },
+  "company": {
+    "title": "关于 Bronze Metal",
+    "lead": "Bronze Metal成立于1980年,为国内外工业提供技术型青铜与铜合金,专注于性能、精度和工程支持。",
+    "missionTitle": "使命",
+    "mission": "通过认证质量与可靠交期,提供合金与技术支持,助力关键工程项目的实现。",
+    "visionTitle": "愿景",
+    "vision": "成为拉丁美洲特种青铜与铜合金的标杆企业。",
+    "valuesTitle": "价值观",
+    "values": [
+      "冶金卓越",
+      "守时承诺",
+      "技术透明",
+      "长期合作"
+    ],
+    "capabilitiesTitle": "生产能力",
+    "capabilities": "特种合金的实心棒材、轴套及铸造型材。轴套直径最大3,600毫米。支持SAE、ASTM、AMS和UNS规范。"
+  },
+  "products": {
+    "indexTitle": "合金家族",
+    "indexLead": "八大家族涵盖高强度、导电性和耐腐蚀应用。",
+    "viewFamily": "查看家族",
+    "alloyHeading": "可选合金",
+    "applicationsHeading": "典型应用",
+    "propertiesHeading": "关键属性",
+    "specs": {
+      "code": "代号",
+      "uns": "UNS",
+      "sae": "SAE",
+      "astm": "ASTM",
+      "ams": "AMS",
+      "tensile": "抗拉强度",
+      "hardness": "硬度",
+      "thermal": "导热率",
+      "melting": "熔点"
+    },
+    "askForDatasheet": "申请完整技术资料"
+  },
+  "industries": {
+    "title": "服务行业",
+    "lead": "我们的合金应用于极端环境下的关键设备 —— 从海底到太空。"
+  },
+  "applications": {
+    "title": "应用",
+    "lead": "了解每个合金家族的实证应用。"
+  },
+  "catalogs": {
+    "title": "技术目录",
+    "lead": "按应用领域索取目录。我们的团队将PDF发送至您提供的邮箱。",
+    "requestButton": "索取目录",
+    "dialog": {
+      "title": "索取目录:{name}",
+      "description": "提交您的信息,我们的团队将把PDF目录发送至您的邮箱。",
+      "submit": "提交请求",
+      "cancel": "取消"
+    }
+  },
+  "contact": {
+    "title": "联系 Bronze Metal",
+    "lead": "告诉我们您正在设计什么 —— 我们将提供技术建议与报价。",
+    "channelsTitle": "直接联系",
+    "addressTitle": "地址",
+    "hoursTitle": "营业时间",
+    "hours": "周一至周五,上午8时至下午5时"
+  },
+  "contactForm": {
+    "name": "姓名",
+    "namePlaceholder": "您的全名",
+    "email": "邮箱",
+    "emailPlaceholder": "you@company.com",
+    "phone": "电话",
+    "phonePlaceholder": "+55 11 90000-0000",
+    "company": "公司",
+    "companyPlaceholder": "您所在的公司",
+    "message": "留言",
+    "messagePlaceholder": "数量、规格、交期、应用...",
+    "submit": "发送留言",
+    "submitting": "正在打开邮件客户端...",
+    "success": "完成!您的邮件客户端已打开并预填留言内容 —— 直接发送即可。",
+    "errors": {
+      "required": "此字段为必填",
+      "email": "请输入有效邮箱",
+      "minMessage": "请提供更多信息以便我们更好地帮助您"
+    }
+  },
+  "footer": {
+    "siteMap": "导航",
+    "company": "公司",
+    "legal": "隐私",
+    "rights": "保留所有权利。",
+    "address": "地址",
+    "iso": "ISO 9001认证"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lead": "我们如何处理本网站收集的个人数据。"
+  },
+  "iso": {
+    "title": "ISO 9001",
+    "lead": "Bronze Metal持有ISO 9001认证 —— 国际领先的质量管理标准。",
+    "whatTitle": "ISO 9001意味着什么",
+    "what": "ISO 9001为全球采用的质量管理体系制定标准要求。证明我们的流程可重复执行,能够批次稳定地交付产品质量。",
+    "principlesTitle": "我们遵循的原则",
+    "principles": [
+      "以客户为中心,满足客户期望",
+      "全流程标准化",
+      "持续改进文化",
+      "严格遵守质量与安全"
+    ],
+    "benefitsTitle": "对客户的意义",
+    "benefits": [
+      "对质量与满意度的承诺",
+      "遵循国际标准",
+      "透明、规范的流程",
+      "持续改进文化"
+    ],
+    "downloadTitle": "证书",
+    "downloadLead": "下载ISO 9001现行证书PDF。",
+    "downloadButton": "下载证书(PDF)"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "lead": "您访问的地址不存在或已迁移。",
+    "cta": "回到首页"
+  }
+}

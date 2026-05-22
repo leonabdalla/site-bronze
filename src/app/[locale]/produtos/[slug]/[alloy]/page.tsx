@@ -6,9 +6,12 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { LinkButton } from "@/components/ui/Button";
+import { AlloyGallery } from "@/components/marketing/AlloyGallery";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { alloyBySlug, productFamilies, type PropertyRow } from "@/data/products";
+import { alloyBySlug, alloyKey, productFamilies, type PropertyRow } from "@/data/products";
+import { getAlloyGallery } from "@/data/alloyGallery";
+import { toContentLocale } from "@/lib/locale";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -27,10 +30,10 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string; alloy: string }>;
 }) {
-  const { locale, alloy } = await params;
-  const entry = alloyBySlug.get(alloy);
+  const { locale, slug, alloy } = await params;
+  const entry = alloyBySlug.get(alloyKey(slug, alloy));
   if (!entry) return {};
-  const loc = locale as "pt" | "en";
+  const loc = toContentLocale(locale);
   return {
     title: `${entry.alloy.code} · ${entry.family.name[loc]}`,
     description: entry.alloy.description[loc],
@@ -44,10 +47,10 @@ export default async function AlloyPage({
 }) {
   const { locale, slug, alloy } = await params;
   setRequestLocale(locale);
-  const entry = alloyBySlug.get(alloy);
-  if (!entry || entry.family.slug !== slug) notFound();
+  const entry = alloyBySlug.get(alloyKey(slug, alloy));
+  if (!entry) notFound();
   const { family, alloy: alloyData } = entry;
-  const loc = (await getLocale()) as "pt" | "en";
+  const loc = toContentLocale(await getLocale());
   const t = await getTranslations("products");
   const tNav = await getTranslations("nav");
 
@@ -61,6 +64,7 @@ export default async function AlloyPage({
   ].filter(Boolean) as string[];
 
   const otherAlloys = family.alloys.filter((a) => a.slug !== alloyData.slug);
+  const gallery = getAlloyGallery(alloyData.slug);
 
   return (
     <>
@@ -108,7 +112,9 @@ export default async function AlloyPage({
                 </LinkButton>
               </div>
             </div>
-            {alloyData.image && (
+            {gallery.length > 0 ? (
+              <AlloyGallery images={gallery} alt={alloyData.code} />
+            ) : alloyData.image ? (
               <div className="relative aspect-[5/4] overflow-hidden rounded-xl bg-white">
                 <Image
                   src={alloyData.image}
@@ -119,7 +125,7 @@ export default async function AlloyPage({
                   priority
                 />
               </div>
-            )}
+            ) : null}
           </div>
         </Container>
       </section>

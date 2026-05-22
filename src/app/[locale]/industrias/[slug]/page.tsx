@@ -10,6 +10,7 @@ import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { industries, industryBySlug } from "@/data/industries";
 import { productFamilyBySlug } from "@/data/products";
+import { toContentLocale } from "@/lib/locale";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -25,7 +26,7 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const industry = industryBySlug.get(slug);
   if (!industry) return {};
-  const loc = locale as "pt" | "en";
+  const loc = toContentLocale(locale);
   return {
     title: industry.name[loc],
     description: industry.summary[loc],
@@ -41,7 +42,7 @@ export default async function IndustryPage({
   setRequestLocale(locale);
   const industry = industryBySlug.get(slug);
   if (!industry) notFound();
-  const loc = (await getLocale()) as "pt" | "en";
+  const loc = toContentLocale(await getLocale());
   const tNav = await getTranslations("nav");
   const t = await getTranslations("products");
 
@@ -138,7 +139,7 @@ export default async function IndustryPage({
 
       <section className="border-t border-slate-200 bg-paper-soft py-20">
         <Container>
-          <div className="surface-card rounded-2xl bg-ink p-10 text-paper md:p-14">
+          <div className="rounded-2xl bg-ink p-10 text-paper shadow-[var(--shadow-card)] md:p-14">
             <div className="grid gap-8 md:grid-cols-[2fr_1fr] md:items-end">
               <div>
                 <SectionEyebrow>{tNav("contact")}</SectionEyebrow>

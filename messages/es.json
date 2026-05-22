@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "siteName": "Bronze Metal",
+    "tagline": "Aleaciones técnicas de bronce y cobre"
+  },
+  "nav": {
+    "home": "Inicio",
+    "company": "Empresa",
+    "products": "Productos",
+    "applications": "Aplicaciones",
+    "industries": "Industrias",
+    "catalogs": "Catálogos",
+    "contact": "Contacto"
+  },
+  "header": {
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "switchLanguage": "Cambiar idioma",
+    "languagePt": "Portugués",
+    "languageEn": "Inglés",
+    "languageEs": "Español",
+    "languageZh": "Chino",
+    "callUs": "Llamar",
+    "emailUs": "Enviar correo",
+    "whatsapp": "WhatsApp"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Desde 1980 · ISO 9001",
+      "title": "Aleaciones de bronce y cobre con soporte de ingeniería que acompaña el proyecto.",
+      "subtitle": "Barras, bujes y perfiles hasta 3.600 mm en aleaciones especiales — aeroespacial, offshore, inyección plástica, defensa y matricería.",
+      "ctaProducts": "Ver línea de productos",
+      "ctaContact": "Hablar con ingeniería"
+    },
+    "productsSection": {
+      "eyebrow": "Familias de aleaciones",
+      "title": "Ocho familias de aleaciones, especificadas para lo que necesita entregar.",
+      "viewAll": "Ver todos los productos"
+    },
+    "industriesSection": {
+      "eyebrow": "Sectores atendidos",
+      "title": "Donde nuestras aleaciones trabajan cada día.",
+      "viewAll": "Conocer industrias"
+    },
+    "trust": {
+      "iso": "Certificación ISO 9001",
+      "isoSub": "Gestión de calidad",
+      "years": "{years} años en operación",
+      "yearsSub": "Desde {since}",
+      "support": "Soporte técnico de ingenieros metalúrgicos",
+      "supportSub": "Especificación, tratamiento y geometría"
+    },
+    "cta": {
+      "title": "¿Tiene un proyecto en mente?",
+      "subtitle": "Comparta especificaciones, plazos y cantidades. Nuestro equipo responde con recomendación técnica y estimación.",
+      "button": "Solicitar contacto"
+    }
+  },
+  "company": {
+    "title": "Acerca de Bronze Metal",
+    "lead": "Fundada en 1980, Bronze Metal es proveedora de aleaciones técnicas de bronce y cobre para la industria nacional e internacional, con foco en desempeño, precisión y soporte de ingeniería.",
+    "missionTitle": "Misión",
+    "mission": "Entregar aleaciones y soporte técnico que viabilicen proyectos críticos de ingeniería, con calidad certificada y plazos confiables.",
+    "visionTitle": "Visión",
+    "vision": "Ser referencia latinoamericana en aleaciones especiales de bronce y cobre.",
+    "valuesTitle": "Valores",
+    "values": [
+      "Excelencia metalúrgica",
+      "Compromiso con los plazos",
+      "Transparencia técnica",
+      "Alianza a largo plazo"
+    ],
+    "capabilitiesTitle": "Capacidad productiva",
+    "capabilities": "Barras macizas, bujes y perfiles fundidos en aleaciones especiales. Diámetros hasta 3.600 mm para bujes. Soporte para especificaciones SAE, ASTM, AMS y UNS."
+  },
+  "products": {
+    "indexTitle": "Familias de aleaciones",
+    "indexLead": "Ocho familias cubren aplicaciones de alta resistencia, conductividad eléctrica y resistencia a la corrosión.",
+    "viewFamily": "Ver familia",
+    "alloyHeading": "Aleaciones disponibles",
+    "applicationsHeading": "Aplicaciones típicas",
+    "propertiesHeading": "Propiedades principales",
+    "specs": {
+      "code": "Código",
+      "uns": "UNS",
+      "sae": "SAE",
+      "astm": "ASTM",
+      "ams": "AMS",
+      "tensile": "Resistencia a la tracción",
+      "hardness": "Dureza",
+      "thermal": "Conductividad térmica",
+      "melting": "Fusión"
+    },
+    "askForDatasheet": "Solicitar ficha técnica completa"
+  },
+  "industries": {
+    "title": "Industrias atendidas",
+    "lead": "Nuestras aleaciones entran en equipos críticos en ambientes severos — del suelo marino al espacio."
+  },
+  "applications": {
+    "title": "Aplicaciones",
+    "lead": "Conozca dónde cada familia de aleaciones tiene desempeño comprobado."
+  },
+  "catalogs": {
+    "title": "Catálogos técnicos",
+    "lead": "Solicite los catálogos por área de aplicación. Nuestro equipo envía el PDF al correo informado.",
+    "requestButton": "Solicitar catálogo",
+    "dialog": {
+      "title": "Recibir catálogo: {name}",
+      "description": "Informe sus datos y nuestro equipo enviará el catálogo en PDF a su correo.",
+      "submit": "Solicitar envío",
+      "cancel": "Cancelar"
+    }
+  },
+  "contact": {
+    "title": "Hable con Bronze Metal",
+    "lead": "Cuéntenos lo que está proyectando — respondemos con recomendación técnica y cotización.",
+    "channelsTitle": "Canales directos",
+    "addressTitle": "Dirección",
+    "hoursTitle": "Horario comercial",
+    "hours": "Lunes a viernes, de 8 h a 17 h"
+  },
+  "contactForm": {
+    "name": "Nombre",
+    "namePlaceholder": "Su nombre completo",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "usted@empresa.com",
+    "phone": "Teléfono",
+    "phonePlaceholder": "+55 11 90000-0000",
+    "company": "Empresa",
+    "companyPlaceholder": "Donde trabaja",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cantidad, especificación, plazo, aplicación...",
+    "submit": "Enviar mensaje",
+    "submitting": "Abriendo su cliente de correo...",
+    "success": "¡Listo! Su cliente de correo se abrió con el mensaje completado — solo presione enviar.",
+    "errors": {
+      "required": "Campo obligatorio",
+      "email": "Informe un correo válido",
+      "minMessage": "Cuéntenos un poco más para que podamos ayudar"
+    }
+  },
+  "footer": {
+    "siteMap": "Navegación",
+    "company": "Empresa",
+    "legal": "Privacidad",
+    "rights": "Todos los derechos reservados.",
+    "address": "Dirección",
+    "iso": "Certificado ISO 9001"
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "lead": "Cómo tratamos los datos personales recopilados en este sitio."
+  },
+  "iso": {
+    "title": "ISO 9001",
+    "lead": "Bronze Metal cuenta con certificación ISO 9001 — el principal estándar internacional de gestión de calidad.",
+    "whatTitle": "Qué significa ISO 9001",
+    "what": "La norma ISO 9001 establece requisitos para sistemas de gestión de calidad adoptados en todo el mundo. Comprueba que operamos procesos reproducibles, capaces de entregar calidad consistente lote tras lote.",
+    "principlesTitle": "Principios que practicamos",
+    "principles": [
+      "Foco en el cliente para atender expectativas",
+      "Procesos estandarizados en todas las etapas",
+      "Cultura de mejora continua",
+      "Adhesión rigurosa a la calidad y seguridad"
+    ],
+    "benefitsTitle": "Beneficios para el cliente",
+    "benefits": [
+      "Compromiso con la calidad y la satisfacción",
+      "Adhesión a estándares internacionales",
+      "Procesos transparentes y organizados",
+      "Cultura de mejora continua"
+    ],
+    "downloadTitle": "Certificado",
+    "downloadLead": "Descargue el certificado ISO 9001 vigente en PDF.",
+    "downloadButton": "Descargar certificado (PDF)"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "lead": "La dirección a la que accedió no existe o fue movida.",
+    "cta": "Ir al inicio"
+  }
+}

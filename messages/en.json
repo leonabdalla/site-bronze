@@ -18,6 +18,8 @@
     "switchLanguage": "Switch language",
     "languagePt": "Portuguese",
     "languageEn": "English",
+    "languageEs": "Spanish",
+    "languageZh": "Chinese",
     "callUs": "Call us",
     "emailUs": "Email us",
     "whatsapp": "WhatsApp"
@@ -149,6 +151,29 @@
   "privacy": {
     "title": "Privacy policy",
     "lead": "How we handle personal data collected on this site."
+  },
+  "iso": {
+    "title": "ISO 9001",
+    "lead": "Bronze Metal holds ISO 9001 certification — the leading international quality management standard.",
+    "whatTitle": "What ISO 9001 means",
+    "what": "ISO 9001 sets requirements for quality management systems used worldwide. It demonstrates that we run reproducible processes capable of delivering consistent product quality, batch after batch.",
+    "principlesTitle": "Principles we live by",
+    "principles": [
+      "Customer focus toward meeting expectations",
+      "Standardized processes across every stage",
+      "Continuous improvement culture",
+      "Strict quality and safety adherence"
+    ],
+    "benefitsTitle": "What this means for customers",
+    "benefits": [
+      "Commitment to quality and satisfaction",
+      "Adherence to international standards",
+      "Transparent, organized processes",
+      "Continuous improvement culture"
+    ],
+    "downloadTitle": "Certificate",
+    "downloadLead": "Download the current ISO 9001 certificate as a PDF.",
+    "downloadButton": "Download certificate (PDF)"
   },
   "notFound": {
     "title": "Page not found",

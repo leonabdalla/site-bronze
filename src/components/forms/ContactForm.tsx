@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -9,10 +9,11 @@ import { CheckCircle2 } from "lucide-react";
 import { contactSchema, type ContactValues } from "@/lib/contact-schema";
 import { submitContactRequest } from "@/lib/submit-contact";
 import { Button } from "@/components/ui/Button";
+import { toContentLocale, type Locale } from "@/lib/locale";
 
 export function ContactForm() {
   const t = useTranslations("contactForm");
-  const locale = useLocale() as "pt" | "en";
+  const locale = toContentLocale(useLocale() as Locale);
   const [submitted, setSubmitted] = useState(false);
 
   const {
@@ -150,3 +151,4 @@ function Field({
     </label>
   );
 }
+

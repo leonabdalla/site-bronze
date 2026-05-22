@@ -11,6 +11,7 @@ import { Sparkles } from "lucide-react";
 import { productFamilies, productFamilyBySlug } from "@/data/products";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
+import { toContentLocale } from "@/lib/locale";
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -26,7 +27,7 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const family = productFamilyBySlug.get(slug);
   if (!family) return {};
-  const loc = locale as "pt" | "en";
+  const loc = toContentLocale(locale);
   return {
     title: family.name[loc],
     description: family.summary[loc],
@@ -43,7 +44,7 @@ export default async function ProductFamilyPage({
   const family = productFamilyBySlug.get(slug);
   if (!family) notFound();
 
-  const loc = (await getLocale()) as "pt" | "en";
+  const loc = toContentLocale(await getLocale());
   const t = await getTranslations("products");
   const tNav = await getTranslations("nav");
 

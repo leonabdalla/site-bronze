@@ -1,12 +1,13 @@
-import { Wrench } from "lucide-react";
+﻿import { Wrench } from "lucide-react";
 import { getLocale, getTranslations } from "next-intl/server";
 import { company } from "@/data/company";
 import { YearsStamp } from "./YearsStamp";
 import { IsoStamp } from "./IsoStamp";
+import { toContentLocale } from "@/lib/locale";
 
 export async function TrustStrip() {
   const t = await getTranslations("home.trust");
-  const locale = (await getLocale()) as "pt" | "en";
+  const locale = toContentLocale(await getLocale());
   const yearsActive = new Date().getFullYear() - company.foundedYear;
   return (
     <div className="surface-card grid grid-cols-1 overflow-hidden rounded-2xl bg-paper sm:grid-cols-3">
@@ -54,3 +55,4 @@ function Card({
     </div>
   );
 }
+

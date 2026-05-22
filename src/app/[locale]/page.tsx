@@ -9,6 +9,7 @@ import { HeroCarousel } from "@/components/marketing/HeroCarousel";
 import { ProductGrid } from "@/components/marketing/ProductGrid";
 import { IndustryGrid } from "@/components/marketing/IndustryGrid";
 import { TrustStrip } from "@/components/marketing/TrustStrip";
+import { toContentLocale } from "@/lib/locale";
 
 export default async function HomePage({
   params,
@@ -19,15 +20,14 @@ export default async function HomePage({
   setRequestLocale(locale);
   const t = await getTranslations("home");
   const tNav = await getTranslations("nav");
-  const tLocale = (await getLocale()) as "pt" | "en";
+  const tLocale = toContentLocale(await getLocale());
 
-  const heroImage = "/images/hero/main.jpg";
   const slides = [
     {
       eyebrow: t("hero.eyebrow"),
       title: t("hero.title"),
       body: t("hero.subtitle"),
-      image: heroImage,
+      image: "/images/hero/company-hero.jpg",
     },
     {
       eyebrow: tLocale === "pt" ? "Engenharia metalúrgica" : "Metallurgical engineering",
@@ -39,19 +39,19 @@ export default async function HomePage({
         tLocale === "pt"
           ? "Equipe técnica orienta a escolha da liga, do tratamento e da geometria — antes da primeira peça."
           : "Our technical team guides alloy, treatment, and geometry choices — before the first part.",
-      image: heroImage,
+      image: "/images/products/ligas-de-bronze-aluminio.jpg",
     },
     {
-      eyebrow: tLocale === "pt" ? "Capacidade industrial" : "Industrial capacity",
+      eyebrow: tLocale === "pt" ? "Cadeia internacional" : "International supply",
       title:
         tLocale === "pt"
-          ? "Buchas e perfis até 3.600 mm."
-          : "Bushings and profiles up to 3,600 mm.",
+          ? "Materiais selecionados em escala global."
+          : "Materials sourced from a global supply chain.",
       body:
         tLocale === "pt"
-          ? "Fundição, usinagem e tratamento térmico para entregar peças prontas para montagem."
-          : "Casting, machining, and heat treatment to deliver ready-to-assemble parts.",
-      image: heroImage,
+          ? "Trabalhamos com produtos internacionais para entregar a melhor relação preço × qualidade em cada especificação."
+          : "We work with international products to deliver the best price-to-quality ratio for every spec.",
+      image: "/images/hero/global-sourcing.jpg",
     },
   ];
 
@@ -107,7 +107,7 @@ export default async function HomePage({
 
       <section className="py-24">
         <Container>
-          <div className="surface-card rounded-2xl bg-ink p-10 text-paper md:p-14">
+          <div className="rounded-2xl bg-ink p-10 text-paper shadow-[var(--shadow-card)] md:p-14">
             <div className="grid gap-8 md:grid-cols-[2fr_1fr] md:items-end">
               <div>
                 <SectionEyebrow>{tNav("contact")}</SectionEyebrow>

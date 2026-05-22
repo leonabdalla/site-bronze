@@ -5,26 +5,32 @@ import { company } from "@/data/company";
 import { productFamilies } from "@/data/products";
 import { ShieldCheck } from "lucide-react";
 import { Logo } from "@/components/marketing/Logo";
+import { toContentLocale, type Locale } from "@/lib/locale";
 
 export async function SiteFooter() {
   const t = await getTranslations();
-  const locale = (await getLocale()) as "pt" | "en";
+  const locale = (await getLocale()) as Locale;
+  const cLoc = toContentLocale(locale);
+  const isoHref = locale === "en" ? "/en/qualidade" : "/qualidade";
   const year = new Date().getFullYear();
 
   return (
     <footer className="mt-24 border-t border-slate-200 bg-ink text-paper">
       <Container className="grid gap-12 py-16 md:grid-cols-12">
         <div className="md:col-span-4 flex flex-col gap-6">
-          <Logo className="h-12 w-auto" variant="dark" />{/* dark variant */}
+          <Logo height={44} variant="dark" />
           <p className="text-sm text-paper/70 max-w-sm">
             {t("metadata.tagline")}.
           </p>
-          <div className="flex items-center gap-3 text-xs">
+          <a
+            href={isoHref}
+            className="inline-flex items-center gap-3 text-xs hover:text-paper"
+          >
             <ShieldCheck size={16} aria-hidden className="text-bronze-300" />
             <span className="font-mono uppercase tracking-[0.15em] text-paper/70">
               {t("footer.iso")}
             </span>
-          </div>
+          </a>
         </div>
 
         <div className="md:col-span-3">
@@ -81,7 +87,7 @@ export async function SiteFooter() {
                   href={{ pathname: "/produtos/[slug]", params: { slug: f.slug } }}
                   className="text-paper/80 hover:text-paper"
                 >
-                  {f.name[locale]}
+                  {f.name[cLoc]}
                 </Link>
               </li>
             ))}
@@ -101,7 +107,7 @@ export async function SiteFooter() {
             <br />
             <span className="font-mono">{company.address.postalCode}</span>
             <br />
-            {company.address.country[locale]}
+            {company.address.country[cLoc]}
           </address>
         </div>
       </Container>

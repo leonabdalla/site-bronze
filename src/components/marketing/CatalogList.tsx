@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Mail, Lock } from "lucide-react";
@@ -7,10 +7,11 @@ import { catalogs } from "@/data/catalogs";
 import { Button } from "@/components/ui/Button";
 import { CatalogCover } from "./CatalogCover";
 import { CatalogRequestDialog } from "./CatalogRequestDialog";
+import { toContentLocale, type Locale } from "@/lib/locale";
 
 export function CatalogList() {
   const t = useTranslations("catalogs");
-  const locale = useLocale() as "pt" | "en";
+  const locale = toContentLocale(useLocale() as Locale);
   const [openSlug, setOpenSlug] = useState<string | null>(null);
 
   const open = catalogs.find((c) => c.slug === openSlug);
@@ -71,3 +72,4 @@ export function CatalogList() {
     </>
   );
 }
+

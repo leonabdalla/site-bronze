@@ -64,7 +64,6 @@ const nextConfig: NextConfig = {
       { source: "/bm-1815-c18150", destination: "/produtos/ligas-de-cobre-cromo-zirconio/bm-1815-c18150", permanent: true },
       { source: "/bm-1751-c17510", destination: "/produtos/ligas-de-cobre-niquel-berilio/bm-1751-c17510", permanent: true },
       { source: "/tzm-astmb387", destination: "/produtos/ligas-de-molibdenio/tzm-astmb387", permanent: true },
-      { source: "/iso-9001", destination: "/empresa", permanent: true },
     ];
   },
 };

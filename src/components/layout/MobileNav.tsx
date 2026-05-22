@@ -1,14 +1,15 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronRight } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { productFamilies } from "@/data/products";
+import { toContentLocale, type Locale } from "@/lib/locale";
 
 export function MobileNav() {
   const t = useTranslations();
-  const locale = useLocale() as "pt" | "en";
+  const locale = toContentLocale(useLocale() as Locale);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -100,3 +101,4 @@ export function MobileNav() {
     </>
   );
 }
+

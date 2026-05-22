@@ -7,6 +7,7 @@ import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { applications } from "@/data/applications";
 import { productFamilyBySlug } from "@/data/products";
 import { Link } from "@/i18n/navigation";
+import { toContentLocale } from "@/lib/locale";
 
 export async function generateMetadata({
   params,
@@ -27,7 +28,7 @@ export default async function ApplicationsPage({
   setRequestLocale(locale);
   const t = await getTranslations("applications");
   const tProducts = await getTranslations("products");
-  const loc = (await getLocale()) as "pt" | "en";
+  const loc = toContentLocale(await getLocale());
 
   return (
     <>
@@ -73,13 +74,13 @@ export default async function ApplicationsPage({
                     <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-paper/95 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-ink shadow-sm backdrop-blur">
                       <span className="text-bronze-500">{counter}</span>
                       <span className="h-3 w-px bg-slate-300" aria-hidden />
-                      <span>{t("title")}</span>
+                      <span>{app.product[loc]}</span>
                     </div>
                   </div>
 
                   <div className={reverse ? "md:order-1" : ""}>
                     <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-bronze-500">
-                      {loc === "pt" ? "Aplicação" : "Application"} {counter}
+                      {app.segment[loc]} · {counter}
                     </span>
                     <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ink md:text-4xl">
                       {app.name[loc]}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -12,6 +12,7 @@ import {
 } from "@/lib/contact-schema";
 import { submitCatalogRequest } from "@/lib/submit-contact";
 import { Button } from "@/components/ui/Button";
+import { toContentLocale, type Locale } from "@/lib/locale";
 
 type Props = {
   open: boolean;
@@ -27,7 +28,7 @@ export function CatalogRequestDialog({
   catalogName,
 }: Props) {
   const t = useTranslations();
-  const locale = useLocale() as "pt" | "en";
+  const locale = toContentLocale(useLocale() as Locale);
   const [submitted, setSubmitted] = useState(false);
 
   const {
@@ -180,3 +181,4 @@ export function CatalogRequestDialog({
     </div>
   );
 }
+

@@ -1,14 +1,15 @@
-"use client";
+﻿"use client";
 
 import { useId, useRef, useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { productFamilies } from "@/data/products";
+import { toContentLocale, type Locale } from "@/lib/locale";
 
 export function ProductsMenu() {
   const t = useTranslations("nav");
-  const locale = useLocale() as "pt" | "en";
+  const locale = toContentLocale(useLocale() as Locale);
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const id = useId();
@@ -72,3 +73,4 @@ export function ProductsMenu() {
     </div>
   );
 }
+

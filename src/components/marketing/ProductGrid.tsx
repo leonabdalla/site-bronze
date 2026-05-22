@@ -1,12 +1,13 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { productFamilies } from "@/data/products";
 import { ArrowUpRight } from "lucide-react";
+import { toContentLocale } from "@/lib/locale";
 
 export async function ProductGrid({ limit }: { limit?: number }) {
   const t = await getTranslations("products");
-  const locale = (await getLocale()) as "pt" | "en";
+  const locale = toContentLocale(await getLocale());
   const list = typeof limit === "number" ? productFamilies.slice(0, limit) : productFamilies;
   return (
     <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -47,3 +48,4 @@ export async function ProductGrid({ limit }: { limit?: number }) {
     </ul>
   );
 }
+

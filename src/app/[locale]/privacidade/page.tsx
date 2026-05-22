@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
+import { toContentLocale } from "@/lib/locale";
 
 export async function generateMetadata({
   params,
@@ -21,7 +22,7 @@ export default async function PrivacyPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("privacy");
-  const loc = locale as "pt" | "en";
+  const loc = toContentLocale(locale);
 
   return (
     <section className="py-20">

@@ -1,11 +1,12 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { getLocale } from "next-intl/server";
 import { industries } from "@/data/industries";
 import { Link } from "@/i18n/navigation";
+import { toContentLocale } from "@/lib/locale";
 
 export async function IndustryGrid() {
-  const locale = (await getLocale()) as "pt" | "en";
+  const locale = toContentLocale(await getLocale());
   return (
     <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {industries.map((industry) => (
@@ -44,3 +45,4 @@ export async function IndustryGrid() {
     </ul>
   );
 }
+

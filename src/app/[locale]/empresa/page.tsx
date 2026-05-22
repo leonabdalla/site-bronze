@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
-import { ShieldCheck, Building2, Factory } from "lucide-react";
+import { ShieldCheck, Building2, Factory, ArrowUpRight } from "lucide-react";
 
 import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { YearsStamp } from "@/components/marketing/YearsStamp";
 import { IsoStamp } from "@/components/marketing/IsoStamp";
+import { Link } from "@/i18n/navigation";
 import { company } from "@/data/company";
+import { toContentLocale } from "@/lib/locale";
 
 export async function generateMetadata({
   params,
@@ -27,7 +29,7 @@ export default async function CompanyPage({
   setRequestLocale(locale);
   const t = await getTranslations("company");
   const tTrust = await getTranslations("home.trust");
-  const loc = (await getLocale()) as "pt" | "en";
+  const loc = toContentLocale(await getLocale());
   const yearsActive = new Date().getFullYear() - company.foundedYear;
 
   return (
@@ -49,7 +51,7 @@ export default async function CompanyPage({
           </div>
           <div className="relative aspect-[5/4] overflow-hidden rounded-xl">
             <Image
-              src="/images/hero/main.jpg"
+              src="/images/hero/company-hero.jpg"
               alt={t("title")}
               fill
               sizes="(min-width: 768px) 40vw, 100vw"
@@ -94,9 +96,12 @@ export default async function CompanyPage({
         <Container className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-center">
           <div className="flex flex-col gap-6">
             <SectionEyebrow>{tTrust("iso")}</SectionEyebrow>
-            <div className="surface-card flex items-center gap-5 rounded-2xl bg-paper p-6 text-ink md:max-w-md">
+            <a
+              href={loc === "en" ? "/en/qualidade" : "/qualidade"}
+              className="surface-card flex items-center gap-5 rounded-2xl bg-paper p-6 text-ink md:max-w-md hover:border-bronze-400"
+            >
               <IsoStamp locale={loc} size={84} />
-              <div>
+              <div className="flex-1">
                 <div className="text-base font-semibold leading-tight">
                   {tTrust("iso")}
                 </div>
@@ -104,7 +109,8 @@ export default async function CompanyPage({
                   {tTrust("isoSub")}
                 </div>
               </div>
-            </div>
+              <ArrowUpRight size={16} aria-hidden className="text-bronze-500" />
+            </a>
             <div className="surface-card flex items-center gap-5 rounded-2xl bg-paper p-6 text-ink md:max-w-md">
               <YearsStamp locale={loc} size={84} />
               <div>

@@ -130,7 +130,7 @@ export const productFamilies: ProductFamily[] = [
         "Good weldability",
       ],
     ),
-    image: "/images/products/ligas-de-bronze-aluminio.png",
+    image: "/images/products/ligas-de-bronze-aluminio.jpg",
     alloys: [
       {
         code: "BM 863",
@@ -167,8 +167,8 @@ export const productFamilies: ProductFamily[] = [
           ["Billet", "Tube", "Machined", "Plate"],
         ),
         applications: bi(
-          ["Buchas e mancais", "Porcas de prensa", "Componentes de trolley", "Cilindros hidráulicos", "Cames", "Suportes de alta resistência"],
-          ["Bushings and bearings", "Press nuts", "Trolley components", "Hydraulic cylinders", "Cams", "High-strength supports"],
+          ["Buchas e mancais", "Porcas de prensa", "Componentes de pontes rolantes", "Peças de empilhadeiras-recuperadoras", "Cilindros hidráulicos", "Cames", "Suportes de alta resistência"],
+          ["Bushings and bearings", "Press nuts", "Bridge-crane components", "Stacker-reclaimer parts", "Hydraulic cylinders", "Cams", "High-strength supports"],
         ),
         processes: bi(
           ["Forjamento", "Fundição centrífuga"],
@@ -202,8 +202,8 @@ export const productFamilies: ProductFamily[] = [
         ],
         formats: bi(["Tarugo", "Tubo", "Usinado", "Placa"], ["Billet", "Tube", "Machined", "Plate"]),
         applications: bi(
-          ["Porcas e sapatas de regulagem em siderurgia", "Engrenagens e cunhas", "Placas de desgaste, cremalheiras e blocos de freio", "Moldes plásticos", "Conformação de tubos", "Aplicações de resistência ao desgaste"],
-          ["Steel-mill adjustment nuts and shoes", "Gears and wedges", "Wear plates, racks, and brake blocks", "Plastic molds", "Tube forming", "Wear-resistance service"],
+          ["Porcas e sapatas de regulagem em siderurgia", "Engrenagens, cunhas, placas de desgaste, cremalheiras e blocos de freio", "Moldes para cavidades de sabão", "Ganchos, cestos e alargadores em ambientes corrosivos", "Componentes de moldes plásticos: réguas, gavetas, insertos, buchas", "Antirruga em conformação e dobra de tubos"],
+          ["Steel-mill adjustment nuts and shoes", "Gears, wedges, wear plates, racks, and brake blocks", "Soap-mold cavities", "Hooks, baskets, and reamers for corrosive environments", "Plastic mold parts: rails, drawers, inserts, bushings", "Anti-wrinkle service in tube forming and bending"],
         ),
         processes: bi(["Fundição contínua", "Fundição centrífuga"], ["Continuous casting", "Centrifugal casting"]),
       },
@@ -368,14 +368,14 @@ export const productFamilies: ProductFamily[] = [
         "Distinctive golden color",
       ],
     ),
-    image: "/images/products/ligas-de-bronze-aluminio-niquel.png",
+    image: "/images/products/ligas-de-bronze-aluminio-niquel.jpg",
     alloys: [
       {
         code: "BM 955",
         slug: "bm-955-c95500-astmb-150-mas-4640",
         uns: "C95500",
         astm: ["ASTM B150"],
-        ams: ["MAS 4640", "AMS 4880"],
+        ams: ["AMS 4880"],
         description: {
           pt: "Bronze-alumínio-níquel fundido de alta resistência mecânica e excelente desempenho em moldes para vidro, peças de aeronaves, engrenagens helicoidais e buchas de cargas elevadas.",
           en: "High-strength cast nickel-aluminum bronze with excellent performance in glass molds, aircraft parts, helical gears, and high-load bushings.",
@@ -409,7 +409,8 @@ export const productFamilies: ProductFamily[] = [
         slug: "bm-630-c63000-astmb-505-mas-4880",
         uns: "C63000",
         astm: ["ASTM B505"],
-        ams: ["MAS 4640"],
+        ams: ["AMS 4640"],
+        otherStandards: ["MAS 4880"],
         description: {
           pt: "Bronze-alumínio-níquel forjado com alta resistência à fadiga e a ambientes corrosivos, com propriedades antifaísca para áreas explosivas.",
           en: "Wrought nickel-aluminum bronze with high fatigue and corrosion resistance, plus non-sparking properties for explosive areas.",
@@ -511,11 +512,39 @@ export const productFamilies: ProductFamily[] = [
         uns: "C86300",
         sae: "SAE 430B",
         astm: ["ASTM B147-8C"],
+        otherStandards: ["Ca86", "BS 140 HTB-3", "JIS CuZn25A15"],
         description: {
-          pt: "Mesma especificação BM 863 da família de bronze-alumínio, classificada também como bronze-alumínio-zinco devido ao seu teor de zinco (22–28%).",
-          en: "The same BM 863 specification as the aluminum bronze family, also classified as aluminum-zinc bronze due to its 22–28% zinc content.",
+          pt: "Mesma especificação BM 863 da família de bronze-alumínio, classificada também como bronze-alumínio-zinco devido ao teor de 22–28% de zinco — combina dureza e resistência à corrosão.",
+          en: "The same BM 863 specification as the aluminum bronze family, also classified as aluminum-zinc bronze due to its 22–28% zinc content — combines hardness and corrosion resistance.",
         },
         image: "/images/alloys/bm-863.png",
+        composition: [
+          { element: el.copper, range: "Remainder" },
+          { element: el.zinc, range: "22.0–28.0%" },
+          { element: el.aluminum, range: "5.0–7.5%" },
+          { element: el.manganese, range: "2.5–5.0%" },
+          { element: el.iron, range: "2.0–4.0%" },
+          { element: el.nickel, range: "máx. 1.0%" },
+          { element: el.tin, range: "máx. 0.2%" },
+          { element: el.lead, range: "máx. 0.2%" },
+        ],
+        properties: [
+          { label: prop.tensile, value: "760–820", unit: "MPa" },
+          { label: prop.yield, value: "410–430", unit: "MPa" },
+          { label: prop.elongation, value: "12–14", unit: "%" },
+          { label: prop.hardnessRockwellB, value: "90–94" },
+          { label: prop.compressive, value: "415–670", unit: "MPa" },
+          { label: prop.density, value: "7.85", unit: "kg/dm³" },
+        ],
+        formats: bi(
+          ["Tarugo", "Tubo", "Usinado", "Placa"],
+          ["Billet", "Tube", "Machined", "Plate"],
+        ),
+        applications: bi(
+          ["Buchas e mancais", "Porcas de prensa", "Componentes de trolley", "Cilindros hidráulicos", "Cames", "Suportes de alta resistência"],
+          ["Bushings and bearings", "Press nuts", "Trolley components", "Hydraulic cylinders", "Cams", "High-strength supports"],
+        ),
+        processes: bi(["Forjamento", "Fundição centrífuga"], ["Forging", "Centrifugal casting"]),
       },
     ],
     applications: bi(
@@ -552,7 +581,7 @@ export const productFamilies: ProductFamily[] = [
         "Excellent hot-forming capability",
       ],
     ),
-    image: "/images/products/ligas-de-cobre-berilio.png",
+    image: "/images/products/ligas-de-cobre-berilio.jpg",
     alloys: [
       {
         code: "BM 172HT",
@@ -560,8 +589,8 @@ export const productFamilies: ProductFamily[] = [
         uns: "C17200",
         rwmaClass: "Class 4",
         description: {
-          pt: "Liga de cobre-berílio endurecível por precipitação, atingindo até 1.380 MPa de tração com condutividade térmica de 156 W/m·°K — referência para moldes plásticos, conectores e ferramentas antifaísca.",
-          en: "Precipitation-hardenable copper-beryllium reaching up to 1,380 MPa tensile strength with 156 W/m·°K thermal conductivity — the reference for plastic molds, connectors, and non-sparking tools.",
+          pt: "Liga de cobre-berílio endurecível por precipitação, atingindo até 1.380 MPa de tração com condutividade térmica de 156 W/m·°K — referência para moldes plásticos, conectores submarinos e ferramentas antifaísca.",
+          en: "Precipitation-hardenable copper-beryllium reaching up to 1,380 MPa tensile strength with 156 W/m·°K thermal conductivity — the reference for plastic molds, subsea connectors, and non-sparking tools.",
         },
         image: "/images/alloys/bm-172-ht.png",
         composition: [
@@ -585,8 +614,8 @@ export const productFamilies: ProductFamily[] = [
         ],
         formats: bi(["Tarugo", "Usinado", "Placa"], ["Billet", "Machined", "Plate"]),
         applications: bi(
-          ["Cavidades e insertos em moldes plásticos", "Anéis de gargalo e fundos de sopro", "Pistões de injeção", "Eletrodos de solda", "Componentes elétricos", "Buchas", "Peças aeronáuticas", "Equipamentos de telecomunicações", "Sistemas de extração de petróleo"],
-          ["Plastic mold cavities and inserts", "Neck rings and blow-mold bottoms", "Injection pistons", "Welding electrodes", "Electrical components", "Bushings", "Aeronautical parts", "Telecommunications equipment", "Petroleum extraction systems"],
+          ["Cavidades e insertos em moldes plásticos", "Anéis de gargalo e fundos de molde de sopro", "Pistões de injeção em fundição de alumínio", "Eletrodos de solda", "Componentes elétricos e eletrônicos", "Buchas e peças aeronáuticas", "Sistemas submarinos de telecomunicações", "Equipamentos de extração de petróleo"],
+          ["Plastic mold cavities and inserts", "Blow-mold neck and bottom rings", "Aluminum die-casting injection pistons", "Welding electrodes", "Electrical and electronic components", "Bushings and aeronautical parts", "Subsea telecommunications systems", "Oil extraction equipment"],
         ),
         processes: bi(["Extrusão", "Forjamento"], ["Extrusion", "Forging"]),
       },
@@ -631,8 +660,8 @@ export const productFamilies: ProductFamily[] = [
         uns: "C18000",
         rwmaClass: "Class 3",
         description: {
-          pt: "Liga endurecível por precipitação para insertos e cavidades de molde com alta dissipação térmica, e porta-eletrodos em solda por resistência.",
-          en: "Precipitation-hardenable alloy for mold inserts and cavities requiring high heat dissipation, and for resistance welding electrode holders.",
+          pt: "Liga endurecível por precipitação para insertos e cavidades de molde com alta dissipação térmica e porta-eletrodos em solda por resistência. Aceita nitretação para reforçar a dureza superficial.",
+          en: "Precipitation-hardenable alloy for mold inserts and cavities with high heat dissipation and for resistance welding electrode holders. Accepts nitriding to reinforce surface hardness.",
         },
         image: "/images/alloys/bm-180.png",
         composition: [
@@ -695,7 +724,7 @@ export const productFamilies: ProductFamily[] = [
         "Excellent precipitation-hardening response",
       ],
     ),
-    image: "/images/products/ligas-de-cobre-cromo-zirconio.png",
+    image: "/images/products/ligas-de-cobre-cromo-zirconio.jpg",
     alloys: [
       {
         code: "BM 1815",
@@ -794,7 +823,7 @@ export const productFamilies: ProductFamily[] = [
           { label: prop.electrical, value: "58–62", unit: "%IACS" },
           { label: prop.thermal, value: "252–260", unit: "W/m·K" },
         ],
-        formats: bi(["Tarugo", "Usinado", "Placa"], ["Billet", "Machined", "Plate"]),
+        formats: bi(["Tarugo", "Usinado", "Placa", "Fita"], ["Billet", "Machined", "Plate", "Strip"]),
         applications: bi(
           ["Equipamentos de solda por resistência", "Ferramental para moldes plásticos", "Eletrodos e porta-eletrodos", "Pistões de injeção", "Conectores, terminais e chaves"],
           ["Resistance welding equipment", "Plastic-mold tooling", "Electrodes and electrode holders", "Injection pistons", "Connectors, terminals, and switches"],
@@ -864,15 +893,15 @@ export const productFamilies: ProductFamily[] = [
         ],
         formats: bi(["Tarugo", "Usinado"], ["Billet", "Machined"]),
         applications: bi(
-          ["Ponteiras de câmara quente em fundição sob pressão", "Componentes de fornos a vácuo", "Equipamentos de raio-X", "Ferramental de alta temperatura", "Suportes para filamentos de lâmpada", "Manuseio de zinco fundido (tubulações, agitadores)"],
-          ["Hot-chamber die-casting tips", "Vacuum-furnace components", "X-ray equipment", "High-temperature tooling", "Lamp filament supports", "Molten-zinc handling (piping, agitators)"],
+          ["Ponteiras de câmara quente em fundição sob pressão", "Serviço em alta temperatura até 1.400 °C", "Substituto do cobre-berílio onde se exige maior resistência à abrasão e condutividade térmica"],
+          ["Hot-chamber die-casting tips", "High-temperature service up to 1,400 °C", "Substitute for beryllium copper where higher abrasion resistance and thermal conductivity are required"],
         ),
         processes: bi(["Metalurgia do pó"], ["Powder metallurgy"]),
       },
     ],
     applications: bi(
-      ["Componentes de fornos a vácuo e ponteiras de câmara quente", "Equipamentos de raio-X de grande porte", "Estruturas aeroespaciais expostas a altas temperaturas", "Suportes para filamentos de lâmpada", "Manuseio de zinco fundido"],
-      ["Vacuum-furnace components and hot-chamber tips", "Large X-ray equipment", "Aerospace structures exposed to high temperatures", "Lamp filament supports", "Molten-zinc handling"],
+      ["Ponteiras de câmara quente em fundição sob pressão", "Operações em alta temperatura (até 1.400 °C)", "Alternativa ao cobre-berílio em aplicações que exigem maior abrasão e condutividade térmica"],
+      ["Hot-chamber die-casting tips", "High-temperature operations (up to 1,400 °C)", "Alternative to beryllium copper where higher abrasion and thermal conductivity matter"],
     ),
   },
 ];
@@ -881,8 +910,14 @@ export const productFamilyBySlug = new Map(
   productFamilies.map((f) => [f.slug, f] as const),
 );
 
+export function alloyKey(familySlug: string, alloySlug: string) {
+  return `${familySlug}/${alloySlug}`;
+}
+
 export const alloyBySlug = new Map(
   productFamilies.flatMap((f) =>
-    f.alloys.map((a) => [a.slug, { family: f, alloy: a }] as const),
+    f.alloys.map(
+      (a) => [alloyKey(f.slug, a.slug), { family: f, alloy: a }] as const,
+    ),
   ),
 );

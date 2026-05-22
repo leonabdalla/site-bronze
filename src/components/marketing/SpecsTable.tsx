@@ -2,6 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import type { Alloy } from "@/data/products";
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight } from "lucide-react";
+import { toContentLocale } from "@/lib/locale";
 
 export async function SpecsTable({
   alloys,
@@ -11,7 +12,7 @@ export async function SpecsTable({
   familySlug: string;
 }) {
   const t = await getTranslations("products.specs");
-  const loc = (await getLocale()) as "pt" | "en";
+  const loc = toContentLocale(await getLocale());
 
   const hasUns = alloys.some((a) => a.uns);
   const hasSae = alloys.some((a) => a.sae);

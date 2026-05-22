@@ -18,6 +18,8 @@
     "switchLanguage": "Mudar idioma",
     "languagePt": "Português",
     "languageEn": "Inglês",
+    "languageEs": "Espanhol",
+    "languageZh": "Chinês",
     "callUs": "Ligar",
     "emailUs": "Enviar e-mail",
     "whatsapp": "WhatsApp"
@@ -149,6 +151,29 @@
   "privacy": {
     "title": "Política de privacidade",
     "lead": "Como tratamos dados pessoais coletados neste site."
+  },
+  "iso": {
+    "title": "ISO 9001",
+    "lead": "A Bronze Metal é certificada ISO 9001 — o principal padrão internacional de gestão da qualidade.",
+    "whatTitle": "O que significa ISO 9001",
+    "what": "A ISO 9001 estabelece requisitos para sistemas de gestão da qualidade adotados em todo o mundo. Comprova que operamos processos reproduzíveis, capazes de entregar qualidade consistente lote após lote.",
+    "principlesTitle": "Princípios que praticamos",
+    "principles": [
+      "Foco no cliente para atender expectativas",
+      "Processos padronizados em todas as etapas",
+      "Cultura de melhoria contínua",
+      "Adesão rigorosa à qualidade e à segurança"
+    ],
+    "benefitsTitle": "Benefícios para o cliente",
+    "benefits": [
+      "Comprometimento com qualidade e satisfação",
+      "Aderência a padrões internacionais",
+      "Processos transparentes e organizados",
+      "Cultura de melhoria contínua"
+    ],
+    "downloadTitle": "Certificado",
+    "downloadLead": "Baixe o certificado ISO 9001 vigente em PDF.",
+    "downloadButton": "Baixar certificado (PDF)"
   },
   "notFound": {
     "title": "Página não encontrada",

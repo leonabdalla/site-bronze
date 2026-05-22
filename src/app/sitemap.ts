@@ -5,9 +5,25 @@ import { industries } from "@/data/industries";
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://site-bronze.vercel.app";
 
-const staticPaths: Record<"pt" | "en", string[]> = {
-  pt: ["", "/empresa", "/produtos", "/aplicacoes", "/industrias", "/catalogos", "/contato", "/privacidade"],
-  en: ["/en", "/en/about", "/en/products", "/en/applications", "/en/industries", "/en/catalogs", "/en/contact", "/en/privacy"],
+const staticPaths: Record<(typeof routing.locales)[number], string[]> = {
+  pt: ["", "/empresa", "/produtos", "/aplicacoes", "/industrias", "/catalogos", "/contato", "/privacidade", "/qualidade"],
+  en: ["/en", "/en/about", "/en/products", "/en/applications", "/en/industries", "/en/catalogs", "/en/contact", "/en/privacy", "/en/qualidade"],
+  es: ["/es", "/es/empresa", "/es/productos", "/es/aplicaciones", "/es/industrias", "/es/catalogos", "/es/contacto", "/es/privacidad", "/es/calidad"],
+  zh: ["/zh", "/zh/empresa", "/zh/produtos", "/zh/aplicacoes", "/zh/industrias", "/zh/catalogos", "/zh/contato", "/zh/privacidade", "/zh/qualidade"],
+};
+
+const prodPathPrefix: Record<(typeof routing.locales)[number], string> = {
+  pt: "/produtos",
+  en: "/en/products",
+  es: "/es/productos",
+  zh: "/zh/produtos",
+};
+
+const indPathPrefix: Record<(typeof routing.locales)[number], string> = {
+  pt: "/industrias",
+  en: "/en/industries",
+  es: "/es/industrias",
+  zh: "/zh/industrias",
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,53 +36,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${BASE_URL}${path}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: path === "" || path === "/en" ? 1 : 0.7,
+        priority: path === "" || /^\/[a-z]{2}$/.test(path) ? 1 : 0.7,
       });
     }
   }
 
   for (const family of productFamilies) {
-    entries.push({
-      url: `${BASE_URL}/produtos/${family.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    });
-    entries.push({
-      url: `${BASE_URL}/en/products/${family.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    });
-    for (const alloy of family.alloys) {
+    for (const locale of routing.locales) {
       entries.push({
-        url: `${BASE_URL}/produtos/${family.slug}/${alloy.slug}`,
+        url: `${BASE_URL}${prodPathPrefix[locale]}/${family.slug}`,
         lastModified: now,
         changeFrequency: "monthly",
-        priority: 0.75,
+        priority: 0.8,
       });
-      entries.push({
-        url: `${BASE_URL}/en/products/${family.slug}/${alloy.slug}`,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.75,
-      });
+      for (const alloy of family.alloys) {
+        entries.push({
+          url: `${BASE_URL}${prodPathPrefix[locale]}/${family.slug}/${alloy.slug}`,
+          lastModified: now,
+          changeFrequency: "monthly",
+          priority: 0.75,
+        });
+      }
     }
   }
 
   for (const industry of industries) {
-    entries.push({
-      url: `${BASE_URL}/industrias/${industry.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    });
-    entries.push({
-      url: `${BASE_URL}/en/industries/${industry.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    });
+    for (const locale of routing.locales) {
+      entries.push({
+        url: `${BASE_URL}${indPathPrefix[locale]}/${industry.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
+    }
   }
 
   return entries;

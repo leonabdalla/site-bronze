@@ -49,7 +49,7 @@ export function LocaleSwitcher() {
                 : "text-paper/60 hover:text-paper transition-colors"
             }
           >
-            {code === "pt" ? "PT" : "EN"}
+            {code.toUpperCase()}
           </button>
         </span>
       ))}

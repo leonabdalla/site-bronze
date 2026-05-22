@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { company } from "@/data/company";
+import { toContentLocale } from "@/lib/locale";
 
 export async function generateMetadata({
   params,
@@ -24,7 +25,7 @@ export default async function ContactPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("contact");
-  const loc = locale as "pt" | "en";
+  const loc = toContentLocale(locale);
 
   return (
     <section className="py-20">

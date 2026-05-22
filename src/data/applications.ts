@@ -3,6 +3,8 @@ import type { Bilingual } from "./products";
 export type Application = {
   slug: string;
   name: Bilingual;
+  product: Bilingual;
+  segment: Bilingual;
   description: Bilingual;
   image: string;
   relatedFamilies: string[];
@@ -10,76 +12,111 @@ export type Application = {
 
 export const applications: Application[] = [
   {
-    slug: "engrenagens-e-buchas",
-    name: { pt: "Engrenagens e buchas", en: "Gears and bushings" },
+    slug: "engrenagem-de-maquina-bm954",
+    name: { pt: "Engrenagem de máquina", en: "Machine gear" },
+    product: { pt: "BM 954", en: "BM 954" },
+    segment: { pt: "Manutenção industrial", en: "Industrial maintenance" },
     description: {
-      pt: "Componentes de transmissão que combinam dureza e resistência ao desgaste. Engrenagens helicoidais, parafusos sem-fim e buchas de alta carga atendem indústrias siderúrgica, naval e de equipamentos pesados.",
-      en: "Transmission components combining hardness and wear resistance. Helical gears, worm screws, and heavy-load bushings serve steel, marine, and heavy-equipment industries.",
+      pt: "Engrenagem de equipamento rotativo fundida em bronze-alumínio (C95400) — combinação de tenacidade e resistência ao desgaste para reposição em linhas industriais.",
+      en: "Rotating-equipment gear cast in aluminum bronze (C95400) — toughness plus wear resistance for industrial line replacement.",
     },
-    image: "/images/industries/conformacao.jpg",
-    relatedFamilies: [
-      "ligas-de-bronze-aluminio",
-      "ligas-de-bronze-aluminio-niquel",
-    ],
+    image: "/images/applications/bm954-machine-gear.jpg",
+    relatedFamilies: ["ligas-de-bronze-aluminio"],
   },
   {
-    slug: "moldes-injecao",
-    name: { pt: "Moldes de injeção", en: "Injection molds" },
+    slug: "wiper-die-bm954",
+    name: { pt: "Wiper die (dobra de tubos)", en: "Wiper die (tube bending)" },
+    product: { pt: "BM 954", en: "BM 954" },
+    segment: { pt: "Ferramental de dobra", en: "Bending tooling" },
     description: {
-      pt: "Insertos e cavidades de molde com alta condutividade térmica resfriam o polímero mais rapidamente, encurtando o ciclo e estendendo a vida útil do ferramental.",
-      en: "Mold inserts and cavities with high thermal conductivity cool the polymer faster, shortening cycle time and extending tooling life.",
+      pt: "Wiper die em bronze-alumínio para dobra de tubos com paredes finas — superfície lisa que reduz marcas e prolonga a vida útil do ferramental.",
+      en: "Aluminum bronze wiper die for thin-wall tube bending — smooth surface that reduces marks and extends tool life.",
     },
-    image: "/images/industries/industria-plastica.jpg",
-    relatedFamilies: [
-      "ligas-de-cobre-berilio",
-      "ligas-de-cobre-cromo-niquel-silicio",
-      "ligas-de-cobre-cromo-zirconio",
-    ],
+    image: "/images/applications/bm954-wiper-die.jpg",
+    relatedFamilies: ["ligas-de-bronze-aluminio"],
   },
   {
-    slug: "eletrodos-de-solda",
-    name: { pt: "Eletrodos de solda", en: "Welding electrodes" },
+    slug: "balde-18l-bm1751ht",
+    name: { pt: "Balde de 18 L (molde de injeção)", en: "18 L bucket (injection mold)" },
+    product: { pt: "BM 1751 HT", en: "BM 1751 HT" },
+    segment: { pt: "Molde de injeção plástica", en: "Plastic injection mold" },
     description: {
-      pt: "Eletrodos de solda por resistência com longa vida útil, combinando condutividade elétrica elevada e resistência à compressão para linhas de alta cadência.",
-      en: "Long-life resistance welding electrodes combining high electrical conductivity and compressive strength for high-cycle lines.",
+      pt: "Inserto de molde para balde de 18 litros em cobre-níquel-berílio (C17510): alta condutividade térmica acelera o resfriamento e encurta o ciclo de injeção.",
+      en: "Mold insert for 18-liter bucket in copper-nickel-beryllium (C17510): high thermal conductivity accelerates cooling and shortens the injection cycle.",
     },
-    image: "/images/industries/solda-por-resistencia.jpg",
-    relatedFamilies: [
-      "ligas-de-cobre-cromo-zirconio",
-      "ligas-de-cobre-cromo-niquel-silicio",
-    ],
+    image: "/images/applications/bm1751ht-18l-bucket.jpg",
+    relatedFamilies: ["ligas-de-cobre-niquel-berilio"],
   },
   {
-    slug: "componentes-marinhos",
-    name: { pt: "Componentes marinhos e offshore", en: "Marine & offshore components" },
+    slug: "three-balls-mandrel-bm280ht",
+    name: { pt: "Mandril de três esferas", en: "Three-ball mandrel" },
+    product: { pt: "BM 280 HT", en: "BM 280 HT" },
+    segment: { pt: "Ferramental de dobra", en: "Bending tooling" },
     description: {
-      pt: "Hélices, mancais, bombas, sedes de válvula e buchas que enfrentam corrosão por água salgada e cavitação em plataformas e embarcações.",
-      en: "Propellers, bearings, pumps, valve seats, and bushings that face saltwater corrosion and cavitation on platforms and vessels.",
+      pt: "Mandril articulado de três esferas em bronze-alumínio-níquel (C63000 tratada) para dobra de tubos de raio curto sem colapso da seção.",
+      en: "Three-ball articulated mandrel in nickel-aluminum bronze (heat-treated C63000) for tight-radius tube bending without section collapse.",
     },
-    image: "/images/industries/offshore.jpg",
-    relatedFamilies: [
-      "ligas-de-bronze-aluminio",
-      "ligas-de-bronze-aluminio-niquel",
-    ],
+    image: "/images/applications/bm280ht-three-balls-mandrel.jpg",
+    relatedFamilies: ["ligas-de-bronze-aluminio-niquel"],
   },
   {
-    slug: "conectores-eletricos",
-    name: { pt: "Conectores elétricos e contatos", en: "Electrical connectors & contacts" },
+    slug: "deep-drawing-plate-bm380",
+    name: { pt: "Placa e punção de embutimento profundo", en: "Deep-drawing plate and punch" },
+    product: { pt: "BM 380", en: "BM 380" },
+    segment: { pt: "Conformação de metais", en: "Metal forming" },
     description: {
-      pt: "Contatos e conectores que exigem alta condutividade combinada com resistência mecânica e à fadiga, especialmente em conectores aeroespaciais e de defesa.",
-      en: "Contacts and connectors that require high conductivity combined with mechanical and fatigue strength, especially in aerospace and defense connectors.",
+      pt: "Placa e punção em bronze-alumínio de alta dureza para operações de embutimento profundo — resistência à abrasão sob carga severa.",
+      en: "High-hardness aluminum bronze plate and punch for deep-drawing operations — abrasion resistance under severe loads.",
     },
-    image: "/images/industries/aeroespacial.jpg",
-    relatedFamilies: ["ligas-de-cobre-berilio", "ligas-de-cobre-niquel-berilio"],
+    image: "/images/applications/bm380-deep-drawing-plate.jpg",
+    relatedFamilies: ["ligas-de-bronze-aluminio"],
   },
   {
-    slug: "componentes-alta-temperatura",
-    name: { pt: "Componentes de alta temperatura", en: "High-temperature components" },
+    slug: "plunger-tip-bm180",
+    name: { pt: "Plunger tip (injeção de alumínio)", en: "Plunger tip (aluminum die casting)" },
+    product: { pt: "BM 180", en: "BM 180" },
+    segment: { pt: "Fundição sob pressão de alumínio", en: "Aluminum die casting" },
     description: {
-      pt: "Peças para fornos, aeroespacial e geração térmica que operam acima de 1.000 °C, exigindo baixa expansão térmica e alta rigidez.",
-      en: "Parts for furnaces, aerospace, and thermal generation operating above 1,000 °C, requiring low thermal expansion and high stiffness.",
+      pt: "Plunger tip em cobre-cromo-níquel-silício (C18000) para máquinas de fundição sob pressão: condutividade térmica e resistência a alta temperatura.",
+      en: "Plunger tip in copper-chromium-nickel-silicon (C18000) for die-casting machines: thermal conductivity and high-temperature strength.",
     },
-    image: "/images/industries/siderurgia.jpg",
-    relatedFamilies: ["ligas-de-molibdenio"],
+    image: "/images/applications/bm180-plunger-tip.jpg",
+    relatedFamilies: ["ligas-de-cobre-cromo-niquel-silicio"],
+  },
+  {
+    slug: "carenagem-honda-bm172ht",
+    name: { pt: "Molde de carenagem Honda", en: "Honda fairing mold" },
+    product: { pt: "BM 172 HT", en: "BM 172 HT" },
+    segment: { pt: "Molde de injeção plástica", en: "Plastic injection mold" },
+    description: {
+      pt: "Inserto de molde para carenagem em cobre-berílio (C17200) — refrigeração uniforme e acabamento superficial estável após milhares de ciclos.",
+      en: "Mold insert for motorcycle fairing in beryllium copper (C17200) — uniform cooling and stable surface finish across thousands of cycles.",
+    },
+    image: "/images/applications/bm172ht-honda-fairing.jpg",
+    relatedFamilies: ["ligas-de-cobre-berilio"],
+  },
+  {
+    slug: "roller-slippers-bm954ht",
+    name: { pt: "Patins de rolo (siderurgia)", en: "Roller slippers (steel industry)" },
+    product: { pt: "BM 954 HT", en: "BM 954 HT" },
+    segment: { pt: "Siderurgia", en: "Steel industry" },
+    description: {
+      pt: "Patins de rolos em bronze-alumínio tratado para mesas de lingotamento — operação contínua sob carga e temperatura elevadas.",
+      en: "Heat-treated aluminum bronze roller slippers for casting tables — continuous operation under high load and temperature.",
+    },
+    image: "/images/applications/bm954ht-roller-slippers.jpg",
+    relatedFamilies: ["ligas-de-bronze-aluminio"],
+  },
+  {
+    slug: "eletrodos-solda-bm1815",
+    name: { pt: "Eletrodos de solda (ponto e projeção)", en: "Welding electrodes (spot & projection)" },
+    product: { pt: "BM 1815", en: "BM 1815" },
+    segment: { pt: "Solda por resistência", en: "Resistance welding" },
+    description: {
+      pt: "Eletrodos em cobre-cromo-zircônio (C18150) para solda a ponto e por projeção: condutividade elétrica próxima do cobre puro e vida útil prolongada.",
+      en: "Copper-chromium-zirconium (C18150) electrodes for spot and projection welding: electrical conductivity close to pure copper and extended service life.",
+    },
+    image: "/images/applications/bm1815-welding-electrodes.jpg",
+    relatedFamilies: ["ligas-de-cobre-cromo-zirconio"],
   },
 ];
