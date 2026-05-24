@@ -11,7 +11,6 @@ export async function SiteFooter() {
   const t = await getTranslations();
   const locale = (await getLocale()) as Locale;
   const cLoc = toContentLocale(locale);
-  const isoHref = locale === "en" ? "/en/qualidade" : "/qualidade";
   const year = new Date().getFullYear();
 
   return (
@@ -22,15 +21,15 @@ export async function SiteFooter() {
           <p className="text-sm text-paper/70 max-w-sm">
             {t("metadata.tagline")}.
           </p>
-          <a
-            href={isoHref}
+          <Link
+            href="/qualidade"
             className="inline-flex items-center gap-3 text-xs hover:text-paper"
           >
             <ShieldCheck size={16} aria-hidden className="text-bronze-300" />
             <span className="font-mono uppercase tracking-[0.15em] text-paper/70">
               {t("footer.iso")}
             </span>
-          </a>
+          </Link>
         </div>
 
         <div className="md:col-span-3">

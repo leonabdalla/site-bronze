@@ -152,19 +152,30 @@ async function step4_emitLegacyStubs() {
 }
 
 /**
- * Walk all generated .html files and prepend basePath to absolute-rooted asset
- * references that Next does NOT auto-prefix in static export — namely public/
- * assets referenced as plain strings (next/image with unoptimized:true, hard-
- * coded <a href> to /catalogs/x.pdf, etc.).
+ * Walk all generated .html files and prepend basePath to absolute-rooted
+ * href= and src= attributes that Next does NOT auto-prefix.
  *
- * Only rewrites paths that match known public/ subdirectories to avoid mangling
- * unrelated content. Skips paths that already start with basePath.
+ * Why this is needed:
+ *  - `next/image` with `unoptimized:true` in static export emits public/
+ *    asset paths verbatim, without prepending basePath.
+ *  - Raw `<a href="/foo">` tags (not using the next-intl `Link` component)
+ *    are passed through verbatim — Next only rewrites `next/link` hrefs.
+ *
+ * We match attributes that start with exactly one `/` and are NOT already
+ * prefixed with the basePath, NOT pointing at Next chunk assets, NOT
+ * protocol-relative, and NOT anchors / mailto / tel / external URLs.
  */
-async function step5_prefixPublicAssets() {
+async function step5_prefixInternalUrls() {
   if (!BASE_PATH) return;
-  const publicDirs = ["images", "catalogs"];
-  const prefixPattern = new RegExp(
-    `(["'(\\s])/(${publicDirs.join("|")})/`,
+  const bp = BASE_PATH.replace(/\/$/, "");
+  // The regex consumes the leading "/" before the lookahead runs, so the skip
+  // alternatives match what comes AFTER that "/" — i.e. without their own
+  // leading slash. (Confused this in the prior version, caused double-prefix.)
+  const bpBare = bp.replace(/^\//, "");
+  const escapedBp = bpBare.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const skip = `${escapedBp}/|_next/|/`;
+  const pattern = new RegExp(
+    `(\\s)(href|src)="/(?!${skip})([^"]*)"`,
     "g",
   );
   let filesTouched = 0;
@@ -178,9 +189,9 @@ async function step5_prefixPublicAssets() {
       } else if (entry.isFile() && entry.name.endsWith(".html")) {
         const src = await readFile(full, "utf8");
         let count = 0;
-        const out = src.replace(prefixPattern, (_m, lead, subdir) => {
+        const out = src.replace(pattern, (_m, lead, attr, rest) => {
           count++;
-          return `${lead}${BASE_PATH}/${subdir}/`;
+          return `${lead}${attr}="${bp}/${rest}"`;
         });
         if (count > 0) {
           await writeFile(full, out, "utf8");
@@ -191,7 +202,7 @@ async function step5_prefixPublicAssets() {
     }
   }
   await walk(OUT_DIR);
-  console.log(`  prefixed ${replacements} public-asset refs across ${filesTouched} html files`);
+  console.log(`  prefixed ${replacements} internal href/src refs across ${filesTouched} html files`);
 }
 
 async function main() {
@@ -203,7 +214,7 @@ async function main() {
   await step2_stripDefaultLocalePrefix();
   await step3_emitCanonicalStubs();
   await step4_emitLegacyStubs();
-  await step5_prefixPublicAssets();
+  await step5_prefixInternalUrls();
   console.log("post-build: done");
 }
 
