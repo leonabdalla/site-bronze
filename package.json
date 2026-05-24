@@ -23,6 +23,9 @@
     "react-hook-form": "^7.76.0",
     "zod": "^4.4.3"
   },
+  "overrides": {
+    "@swc/helpers": "0.5.21"
+  },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
