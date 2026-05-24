@@ -1,0 +1,106 @@
+# Canonical: strip /pt/ prefix (Portuguese is the default locale, no prefix shown)
+/pt    /    301
+/pt/   /    301
+/pt/*  /:splat  301
+
+# Legacy Wix top-level paths → new paths
+/produtos-bronze-metal                /produtos/    301
+/catalogo-bronze-metal                /catalogos/   301
+/contato-bronze-metal                 /contato/     301
+/aplicações-bronze-alumínio           /aplicacoes/  301
+/industrias-e-mercado-bronze-alumínio /industrias/  301
+/prolitica-de-privacidade             /privacidade/ 301
+
+# Legacy English Wix paths → new EN paths
+/home-en                                       /en/                                                                  301
+/home-en/company                               /en/about/                                                            301
+/home-en/products                              /en/products/                                                         301
+/home-en/applications                          /en/applications/                                                     301
+/home-en/industries                            /en/industries/                                                       301
+/home-en/catalogs                              /en/catalogs/                                                         301
+/home-en/access-bronze-metal-catalogs          /en/catalogs/                                                         301
+/home-en/contact                               /en/contact/                                                          301
+/home-en/aluminum-bronze-alloys                /en/products/ligas-de-bronze-aluminio/                                301
+/home-en/nickel-aluminum-bronze-alloys         /en/products/ligas-de-bronze-aluminio-niquel/                         301
+/home-en/aluminum-zinc-bronze-alloys           /en/products/ligas-bronze-aluminio-zinco/                             301
+/home-en/beryllium-copper-alloys               /en/products/ligas-de-cobre-berilio/                                  301
+/home-en/copper-chromium-nickel-silicon-alloys /en/products/ligas-de-cobre-cromo-niquel-silicio/                     301
+/home-en/copper-chromium-zirconium-alloys      /en/products/ligas-de-cobre-cromo-zirconio/                           301
+/home-en/copper-nickel-beryllium-alloys        /en/products/ligas-de-cobre-niquel-berilio/                           301
+/home-en/molybdenum-alloys-tzm-en              /en/products/ligas-de-molibdenio/                                     301
+
+# Legacy flat alloy URLs → new nested structure
+/bm-863-sae430b-c86300              /produtos/ligas-de-bronze-aluminio/bm-863-sae430b-c86300/              301
+/bm-954-c95400-astmb505-b271        /produtos/ligas-de-bronze-aluminio/bm-954-c95400-astmb505-b271/        301
+/bm-300-c95900-astmb505             /produtos/ligas-de-bronze-aluminio/bm-300-c95900-astmb505/             301
+/bm-959-c95900-astmb505             /produtos/ligas-de-bronze-aluminio/bm-959-c95900-astmb505/             301
+/bm-380-ligasespeciais-de-alta-dureza /produtos/ligas-de-bronze-aluminio/bm-380-ligasespeciais-de-alta-dureza/ 301
+/bm-340-ligas-especiais-de-alta-dureza /produtos/ligas-de-bronze-aluminio/bm-340-ligas-especiais-de-alta-dureza/ 301
+/bm-955-c95500-astmb-150-mas-4640   /produtos/ligas-de-bronze-aluminio-niquel/bm-955-c95500-astmb-150-mas-4640/ 301
+/bm-630-c63000-astmb-505-mas-4880   /produtos/ligas-de-bronze-aluminio-niquel/bm-630-c63000-astmb-505-mas-4880/ 301
+/bm-280-ht-am-s4590-4881            /produtos/ligas-de-bronze-aluminio-niquel/bm-280-ht-am-s4590-4881/     301
+/bm-172-ht-c17200                   /produtos/ligas-de-cobre-berilio/bm-172-ht-c17200/                     301
+/bm-180-c18000                      /produtos/ligas-de-cobre-cromo-niquel-silicio/bm-180-c18000/           301
+/bm-1815-c18150                     /produtos/ligas-de-cobre-cromo-zirconio/bm-1815-c18150/                301
+/bm-1751-c17510                     /produtos/ligas-de-cobre-niquel-berilio/bm-1751-c17510/                301
+/tzm-astmb387                       /produtos/ligas-de-molibdenio/tzm-astmb387/                            301
+
+# EN localized URLs → on-disk paths (URLs use English words, files are under PT slugs)
+/en/about         /en/empresa/                  200
+/en/about/        /en/empresa/                  200
+/en/products      /en/produtos/                 200
+/en/products/     /en/produtos/                 200
+/en/products/*    /en/produtos/:splat           200
+/en/applications  /en/aplicacoes/               200
+/en/applications/ /en/aplicacoes/               200
+/en/industries    /en/industrias/               200
+/en/industries/   /en/industrias/               200
+/en/industries/*  /en/industrias/:splat         200
+/en/catalogs      /en/catalogos/                200
+/en/catalogs/     /en/catalogos/                200
+/en/contact       /en/contato/                  200
+/en/contact/      /en/contato/                  200
+/en/privacy       /en/privacidade/              200
+/en/privacy/      /en/privacidade/              200
+
+# ES localized URLs → on-disk paths
+/es/productos     /es/produtos/                 200
+/es/productos/    /es/produtos/                 200
+/es/productos/*   /es/produtos/:splat           200
+/es/aplicaciones  /es/aplicacoes/               200
+/es/aplicaciones/ /es/aplicacoes/               200
+/es/contacto      /es/contato/                  200
+/es/contacto/     /es/contato/                  200
+/es/privacidad    /es/privacidade/              200
+/es/privacidad/   /es/privacidade/              200
+/es/calidad       /es/qualidade/                200
+/es/calidad/      /es/qualidade/                200
+
+# PT (default locale): serve /pt/* content at unprefixed clean URLs (URL bar unchanged)
+/                /pt/                       200
+
+/empresa         /pt/empresa/               200
+/empresa/        /pt/empresa/               200
+
+/produtos        /pt/produtos/              200
+/produtos/       /pt/produtos/              200
+/produtos/*      /pt/produtos/:splat        200
+
+/aplicacoes      /pt/aplicacoes/            200
+/aplicacoes/     /pt/aplicacoes/            200
+
+/industrias      /pt/industrias/            200
+/industrias/     /pt/industrias/            200
+/industrias/*    /pt/industrias/:splat      200
+
+/catalogos       /pt/catalogos/             200
+/catalogos/      /pt/catalogos/             200
+
+/contato         /pt/contato/               200
+/contato/        /pt/contato/               200
+
+/privacidade     /pt/privacidade/           200
+/privacidade/    /pt/privacidade/           200
+
+/qualidade       /pt/qualidade/             200
+/qualidade/      /pt/qualidade/             200

@@ -41,7 +41,7 @@ export async function generateMetadata({
       template: `%s · ${t("siteName")}`,
     },
     description: t("tagline"),
-    metadataBase: new URL("https://site-bronze.vercel.app"),
+    metadataBase: new URL("https://site-bronze.pages.dev"),
     alternates: {
       languages: {
         pt: "/",
