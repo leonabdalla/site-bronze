@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { productFamilies } from "@/data/products";
 import { toContentLocale, type Locale } from "@/lib/locale";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 
 export function MobileNav() {
   const t = useTranslations();
@@ -86,6 +87,14 @@ export function MobileNav() {
                 {f.name[locale]}
               </Link>
             ))}
+          </div>
+        </div>
+        <div className="mt-8 border-t border-slate-200 pt-6">
+          <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+            {t("header.switchLanguage")}
+          </div>
+          <div className="mt-3">
+            <LocaleSwitcher variant="light" size="md" />
           </div>
         </div>
       </div>

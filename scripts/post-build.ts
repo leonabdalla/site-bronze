@@ -152,57 +152,83 @@ async function step4_emitLegacyStubs() {
 }
 
 /**
- * Walk all generated .html files and prepend basePath to absolute-rooted
- * href= and src= attributes that Next does NOT auto-prefix.
+ * Walk all text output and prepend basePath to absolute-rooted asset paths
+ * that Next does NOT auto-prefix.
  *
  * Why this is needed:
  *  - `next/image` with `unoptimized:true` in static export emits public/
  *    asset paths verbatim, without prepending basePath.
  *  - Raw `<a href="/foo">` tags (not using the next-intl `Link` component)
- *    are passed through verbatim — Next only rewrites `next/link` hrefs.
+ *    are passed through verbatim.
+ *  - Next 16 RSC streaming payloads (.txt and `__next.*` files) embed image
+ *    `src` strings as raw data — when React hydrates from these on client
+ *    nav / prefetch, it re-renders Image components with the raw path,
+ *    triggering 404s for /images/... requests.
  *
- * We match attributes that start with exactly one `/` and are NOT already
- * prefixed with the basePath, NOT pointing at Next chunk assets, NOT
- * protocol-relative, and NOT anchors / mailto / tel / external URLs.
+ * What we rewrite, in two passes per file:
+ *  1. HTML attribute form: `href="/X"` and `src="/X"` (skips already-
+ *     prefixed paths, Next chunks, anchors, mailto, tel, externals).
+ *  2. Quoted string form in RSC payloads: `"/X"` where X looks like an
+ *     asset path under known public/ subdirectories. Narrower than the
+ *     HTML pass because RSC payloads contain arbitrary strings — we only
+ *     touch known public asset roots.
  */
 async function step5_prefixInternalUrls() {
   if (!BASE_PATH) return;
   const bp = BASE_PATH.replace(/\/$/, "");
-  // The regex consumes the leading "/" before the lookahead runs, so the skip
-  // alternatives match what comes AFTER that "/" — i.e. without their own
-  // leading slash. (Confused this in the prior version, caused double-prefix.)
   const bpBare = bp.replace(/^\//, "");
   const escapedBp = bpBare.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const skip = `${escapedBp}/|_next/|/`;
-  const pattern = new RegExp(
+  const attrPattern = new RegExp(
     `(\\s)(href|src)="/(?!${skip})([^"]*)"`,
     "g",
   );
+  // Quoted-string pass: catches RSC payload entries like "/images/foo.jpg".
+  // Limited to public/ asset roots so we don't mangle unrelated strings.
+  const publicRoots = ["images", "catalogs", "favicon.ico"];
+  const rootsAlt = publicRoots.join("|");
+  const stringPattern = new RegExp(
+    `"/(${rootsAlt})(/[^"]*)?"`,
+    "g",
+  );
+
   let filesTouched = 0;
   let replacements = 0;
+  const targetExts = [".html", ".txt"];
+
   async function walk(dir: string) {
     const entries = await readdir(dir, { withFileTypes: true });
     for (const entry of entries) {
       const full = join(dir, entry.name);
       if (entry.isDirectory()) {
         await walk(full);
-      } else if (entry.isFile() && entry.name.endsWith(".html")) {
-        const src = await readFile(full, "utf8");
-        let count = 0;
-        const out = src.replace(pattern, (_m, lead, attr, rest) => {
-          count++;
-          return `${lead}${attr}="${bp}/${rest}"`;
-        });
-        if (count > 0) {
-          await writeFile(full, out, "utf8");
-          filesTouched++;
-          replacements += count;
-        }
+        continue;
+      }
+      if (!entry.isFile()) continue;
+      const isTextTarget =
+        targetExts.some((ext) => entry.name.endsWith(ext)) ||
+        entry.name.startsWith("__next");
+      if (!isTextTarget) continue;
+
+      const src = await readFile(full, "utf8");
+      let count = 0;
+      let out = src.replace(attrPattern, (_m, lead, attr, rest) => {
+        count++;
+        return `${lead}${attr}="${bp}/${rest}"`;
+      });
+      out = out.replace(stringPattern, (_m, root, rest) => {
+        count++;
+        return `"${bp}/${root}${rest ?? ""}"`;
+      });
+      if (count > 0) {
+        await writeFile(full, out, "utf8");
+        filesTouched++;
+        replacements += count;
       }
     }
   }
   await walk(OUT_DIR);
-  console.log(`  prefixed ${replacements} internal href/src refs across ${filesTouched} html files`);
+  console.log(`  prefixed ${replacements} internal refs across ${filesTouched} files`);
 }
 
 async function main() {
