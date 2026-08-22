@@ -41,7 +41,7 @@ export async function generateMetadata({
       template: `%s · ${t("siteName")}`,
     },
     description: t("tagline"),
-    metadataBase: new URL("https://site-bronze.pages.dev"),
+    metadataBase: new URL("https://bronzemetal.com.br"),
     alternates: {
       languages: {
         pt: "/",

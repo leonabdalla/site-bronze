@@ -5,7 +5,7 @@ import { industries } from "@/data/industries";
 
 export const dynamic = "force-static";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://site-bronze.pages.dev";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bronzemetal.com.br";
 
 const staticPaths: Record<(typeof routing.locales)[number], string[]> = {
   pt: ["", "/empresa", "/produtos", "/aplicacoes", "/industrias", "/catalogos", "/contato", "/privacidade", "/qualidade"],
