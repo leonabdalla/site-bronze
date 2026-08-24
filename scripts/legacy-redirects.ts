@@ -34,6 +34,16 @@ export const legacyRedirects: Record<string, string> = {
   "/home-en/copper-nickel-beryllium-alloys": "/en/products/ligas-de-cobre-niquel-berilio/",
   "/home-en/molybdenum-alloys-tzm-en": "/en/products/ligas-de-molibdenio/",
 
+  // Legacy Wix flat product-family URLs (PT, no /produtos/ prefix)
+  "/ligas-de-bronze-aluminio": "/produtos/ligas-de-bronze-aluminio/",
+  "/ligas-de-bronze-aluminio-niquel": "/produtos/ligas-de-bronze-aluminio-niquel/",
+  "/ligas-bronze-aluminio-zinco": "/produtos/ligas-bronze-aluminio-zinco/",
+  "/ligas-de-cobre-berilio": "/produtos/ligas-de-cobre-berilio/",
+  "/ligas-de-cobre-cromo-niquel-silicio": "/produtos/ligas-de-cobre-cromo-niquel-silicio/",
+  "/ligas-de-cobre-cromo-zirconio": "/produtos/ligas-de-cobre-cromo-zirconio/",
+  "/ligas-de-cobre-niquel-berilio": "/produtos/ligas-de-cobre-niquel-berilio/",
+  "/ligas-de-molibdenio": "/produtos/ligas-de-molibdenio/",
+
   // Legacy flat alloy URLs
   "/bm-863-sae430b-c86300": "/produtos/ligas-de-bronze-aluminio/bm-863-sae430b-c86300/",
   "/bm-954-c95400-astmb505-b271": "/produtos/ligas-de-bronze-aluminio/bm-954-c95400-astmb505-b271/",
