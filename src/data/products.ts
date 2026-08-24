@@ -290,7 +290,7 @@ export const productFamilies: ProductFamily[] = [
           { label: prop.compressive, value: "980–1034", unit: "MPa" },
           { label: prop.density, value: "7.55", unit: "kg/dm³" },
         ],
-        formats: bi(["Usinado", "Placa"], ["Machined", "Plate"]),
+        formats: bi(["Tarugo", "Tubo", "Usinado", "Placa"], ["Billet", "Tube", "Machined", "Plate"]),
         applications: bi(
           ["Peças de máquinas", "Moldes para vidro", "Mordentes e placas de desgaste", "Componentes de aeronaves", "Equipamentos de decapagem", "Guias de válvula e pistão", "Engrenagens helicoidais", "Buchas e trens de pouso", "Indústrias naval, plástica e siderúrgica"],
           ["Machine parts", "Glass molds", "Jaw components and wear plates", "Aircraft components", "Pickling equipment", "Valve guides and piston guides", "Helical gears", "Bushings and landing-gear parts", "Naval, plastic, and steel industries"],
@@ -325,7 +325,7 @@ export const productFamilies: ProductFamily[] = [
           { label: prop.compressive, value: "980–1034", unit: "MPa" },
           { label: prop.density, value: "7.55", unit: "kg/dm³" },
         ],
-        formats: bi(["Tarugo", "Usinado", "Placa"], ["Billet", "Machined", "Plate"]),
+        formats: bi(["Tarugo", "Tubo", "Usinado", "Placa"], ["Billet", "Tube", "Machined", "Plate"]),
         applications: bi(
           ["Mancais para serviço pesado em ambientes corrosivos", "Buchas para aeronáutica", "Bombas e eixos marítimos", "Hélices e anéis de desgaste", "Engrenagens", "Ferramental para dobra de tubos", "Ferramentas antifaísca para áreas explosivas"],
           ["Heavy-duty bearings in corrosive environments", "Aircraft bushings", "Marine pumps and shafts", "Propellers and wear rings", "Gears", "Tube-bending tooling", "Spark-resistant safety tools for explosive atmospheres"],
@@ -357,7 +357,7 @@ export const productFamilies: ProductFamily[] = [
           { label: prop.compressive, value: "1034–1324", unit: "MPa" },
           { label: prop.density, value: "7.45", unit: "kg/dm³" },
         ],
-        formats: bi(["Tarugo", "Usinado", "Placa"], ["Billet", "Machined", "Plate"]),
+        formats: bi(["Tarugo", "Tubo", "Usinado", "Placa"], ["Billet", "Tube", "Machined", "Plate"]),
         applications: bi(
           ["Mancais para trens de pouso aeroespaciais", "Buchas para cargas pesadas", "Roletes de conformação de tubos", "Componentes para moldes plásticos e de vidro", "Ferramental para dobra de tubos"],
           ["Aerospace landing-gear bearings", "Heavy-load bushings", "Tube-forming rollers", "Plastic and glass mold components", "Tube-bending tooling"],
