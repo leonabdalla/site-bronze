@@ -148,6 +148,7 @@ export const productFamilies: ProductFamily[] = [
           { element: el.iron, range: "3.0–5.0%" },
           { element: el.nickel, range: "máx. 1.5%" },
           { element: el.manganese, range: "máx. 0.5%" },
+          { element: el.others, range: "máx. 0.5%" },
         ],
         properties: [
           { label: prop.tensile, value: "586–724", unit: "MPa" },
@@ -177,10 +178,11 @@ export const productFamilies: ProductFamily[] = [
         image: "/images/alloys/bm-959.png",
         composition: [
           { element: el.copper, range: "Remainder" },
-          { element: el.aluminum, range: "12.0–13.5%" },
+          { element: el.aluminum, range: "12.0–14.0%" },
           { element: el.iron, range: "3.0–5.0%" },
-          { element: el.manganese, range: "máx. 1.5%" },
+          { element: el.manganese, range: "máx. 3.5%" },
           { element: el.nickel, range: "máx. 0.5%" },
+          { element: el.others, range: "máx. 0.5%" },
         ],
         properties: [
           { label: prop.tensile, value: "517–724", unit: "MPa" },
@@ -210,8 +212,9 @@ export const productFamilies: ProductFamily[] = [
           { element: el.copper, range: "Remainder" },
           { element: el.aluminum, range: "14.0–16.0%" },
           { element: el.iron, range: "4.5–6.5%" },
-          { element: el.cobalt, range: "2.0–3.0%" },
-          { element: el.manganese, range: "2.0–2.5%" },
+          { element: el.cobalt, range: "máx. 3.0%" },
+          { element: el.manganese, range: "máx. 3.0%" },
+          { element: el.others, range: "máx. 0.5%" },
         ],
         properties: [
           { label: prop.tensile, value: "600–750", unit: "MPa" },
@@ -348,7 +351,7 @@ export const productFamilies: ProductFamily[] = [
         image: "/images/alloys/bm-280-ht.png",
         composition: [
           { element: el.copper, range: "Remainder" },
-          { element: el.aluminum, range: "10.0–11.0%" },
+          { element: el.aluminum, range: "9.5–12.5%" },
           { element: el.iron, range: "4.0–6.0%" },
           { element: el.nickel, range: "4.0–6.0%" },
           { element: el.manganese, range: "máx. 1.5%" },
@@ -426,6 +429,7 @@ export const productFamilies: ProductFamily[] = [
           { element: el.nickel, range: "máx. 1.0%" },
           { element: el.tin, range: "máx. 0.2%" },
           { element: el.lead, range: "máx. 0.2%" },
+          { element: el.others, range: "máx. 0.5%" },
         ],
         properties: [
           { label: prop.tensile, value: "760–820", unit: "MPa" },
@@ -496,8 +500,8 @@ export const productFamilies: ProductFamily[] = [
         composition: [
           { element: el.copper, range: "Remainder" },
           { element: el.beryllium, range: "1.8–2.0%" },
-          { element: el.cobalt, range: "0.2–0.4%" },
-          { element: el.nickel, range: "máx. 0.1%" },
+          { element: el.cobalt, range: "máx. 0.3%" },
+          { element: el.nickel, range: "máx. 0.2%" },
           { element: el.iron, range: "máx. 0.1%" },
           { element: el.others, range: "máx. 0.5%" },
         ],
@@ -567,12 +571,11 @@ export const productFamilies: ProductFamily[] = [
         image: "/images/alloys/bm-180.png",
         composition: [
           { element: el.copper, range: "Remainder" },
-          { element: el.chromium, range: "0.35–0.45%" },
-          { element: el.nickel, range: "2.4–2.6%" },
+          { element: el.chromium, range: "0.1–0.8%" },
+          { element: el.nickel, range: "1.8–3.0%" },
           { element: el.silicon, range: "0.4–0.8%" },
-          { element: el.zirconium, range: "0.2–0.27%" },
           { element: el.iron, range: "máx. 0.2%" },
-          { element: el.others, range: "máx. 0.3%" },
+          { element: el.others, range: "máx. 0.5%" },
         ],
         properties: [
           { label: prop.tensile, value: "648–690", unit: "MPa" },
@@ -640,9 +643,9 @@ export const productFamilies: ProductFamily[] = [
         image: "/images/alloys/bm-1815.png",
         composition: [
           { element: el.copper, range: "Remainder" },
-          { element: el.chromium, range: "0.5–1.2%" },
-          { element: el.zirconium, range: "0.07–0.3%" },
-          { element: el.others, range: "máx. 0.2%" },
+          { element: el.chromium, range: "0.5–1.5%" },
+          { element: el.zirconium, range: "mín. 0.02%" },
+          { element: el.others, range: "máx. 0.5%" },
         ],
         properties: [
           { label: prop.tensile, value: "440–520", unit: "MPa" },
@@ -782,7 +785,7 @@ export const productFamilies: ProductFamily[] = [
           { element: el.molybdenum, range: "Remainder" },
           { element: el.titanium, range: "máx. 0.5%" },
           { element: el.zirconium, range: "máx. 0.1%" },
-          { element: el.others, range: "máx. 0.04%" },
+          { element: el.others, range: "máx. 0.5%" },
         ],
         properties: [
           { label: prop.tensile, value: "750–800", unit: "MPa" },
