@@ -71,9 +71,6 @@ export default async function ProductFamilyPage({
                 ? family.alloys.map((a) => <span key={a.code}>{a.code}</span>)
                 : family.alloys[0].code}
             </h1>
-            <p className="mt-2 text-lg font-medium text-slate-500">
-              {family.name[loc]}
-            </p>
             <p className="mt-5 text-lg text-slate-600 leading-relaxed">
               {family.longDescription[loc]}
             </p>
