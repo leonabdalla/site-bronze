@@ -105,7 +105,11 @@ export default async function IsoPage({
               {t("downloadLead")}
             </p>
             <a
-              href="/catalogs/iso-9001-certificate.pdf"
+              href={
+                locale === "pt"
+                  ? "/catalogs/iso-9001-certificate-pt.pdf"
+                  : "/catalogs/iso-9001-certificate-en.pdf"
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-paper px-5 py-2.5 text-sm font-medium text-ink hover:bg-paper/90"
