@@ -445,8 +445,8 @@ export const productFamilies: ProductFamily[] = [
           ["Billet", "Tube", "Machined", "Plate"],
         ),
         applications: bi(
-          ["Buchas e mancais", "Porcas de prensa", "Componentes de trolley", "Cilindros hidráulicos", "Cames", "Suportes de alta resistência"],
-          ["Bushings and bearings", "Press nuts", "Trolley components", "Hydraulic cylinders", "Cams", "High-strength supports"],
+          ["Buchas e mancais", "Coroas", "Válvulas", "Porcas de prensa", "Componentes de trolley", "Cilindros hidráulicos", "Cames", "Suportes de alta resistência"],
+          ["Bushings and bearings", "Crown gears", "Valves", "Press nuts", "Trolley components", "Hydraulic cylinders", "Cams", "High-strength supports"],
         ),
         processes: bi(["Forjamento", "Fundição centrífuga"], ["Forging", "Centrifugal casting"]),
       },
@@ -591,8 +591,8 @@ export const productFamilies: ProductFamily[] = [
         ],
         formats: bi(["Tarugo", "Usinado", "Placa"], ["Billet", "Machined", "Plate"]),
         applications: bi(
-          ["Porta-eletrodos para solda", "Discos e eletrodos de solda contínua", "Cavidades de moldes plásticos", "Pistões de injeção de alumínio", "Cavidades de moldes de sabão"],
-          ["Welding electrode holders", "Continuous seam-welding discs and electrodes", "Plastic mold cavities", "Aluminum injection pistons", "Soap-mold cavities"],
+          ["Porta-eletrodos para solda", "Eletrodos de solda por projeção", "Cavidades de moldes plásticos", "Pistões de injeção de alumínio", "Cavidades de moldes de sabão"],
+          ["Welding electrode holders", "Projection welding electrodes", "Plastic mold cavities", "Aluminum injection pistons", "Soap-mold cavities"],
         ),
         processes: bi(["Extrusão", "Forjamento"], ["Extrusion", "Forging"]),
       },
@@ -650,7 +650,7 @@ export const productFamilies: ProductFamily[] = [
         properties: [
           { label: prop.tensile, value: "440–520", unit: "MPa" },
           { label: prop.yield, value: "350–466", unit: "MPa" },
-          { label: prop.elongation, value: "10–18", unit: "%" },
+          { label: prop.elongation, value: "8–10", unit: "%" },
           { label: prop.hardnessRockwellB, value: "76–80" },
           { label: prop.hardnessBrinell, value: "139–149" },
           { label: prop.density, value: "8.90", unit: "kg/dm³" },
@@ -661,8 +661,8 @@ export const productFamilies: ProductFamily[] = [
         ],
         formats: bi(["Tarugo", "Usinado", "Placa"], ["Billet", "Machined", "Plate"]),
         applications: bi(
-          ["Eletrodos e tampas de eletrodos automotivos", "Braços robóticos de solda", "Moldes para fundição contínua", "Contatos elétricos, pinos e matrizes"],
-          ["Automotive welding electrodes and caps", "Robotic welding arms", "Continuous-casting molds", "Electrical contacts, studs, and dies"],
+          ["Porta-eletrodos", "Eletrodos e tampas de eletrodos automotivos", "Discos de solda de costura", "Braços robóticos de solda", "Moldes para fundição contínua", "Contatos elétricos, pinos e matrizes"],
+          ["Electrode holders", "Automotive welding electrodes and caps", "Seam-welding discs", "Robotic welding arms", "Continuous-casting molds", "Electrical contacts, studs, and dies"],
         ),
         processes: bi(["Extrusão", "Forjamento"], ["Extrusion", "Forging"]),
       },
@@ -721,7 +721,7 @@ export const productFamilies: ProductFamily[] = [
         properties: [
           { label: prop.tensile, value: "795–915", unit: "MPa" },
           { label: prop.yield, value: "620–760", unit: "MPa" },
-          { label: prop.elongation, value: "10–11", unit: "%" },
+          { label: prop.elongation, value: "10–13", unit: "%" },
           { label: prop.hardnessRockwellB, value: "96–100" },
           { label: prop.hardnessBrinell, value: "215–241" },
           { label: prop.density, value: "8.75", unit: "kg/dm³" },
@@ -801,8 +801,8 @@ export const productFamilies: ProductFamily[] = [
         ],
         formats: bi(["Tarugo", "Usinado"], ["Billet", "Machined"]),
         applications: bi(
-          ["Ponteiras de câmara quente em fundição sob pressão", "Serviço em alta temperatura até 1.400 °C", "Substituto do cobre-berílio onde se exige maior resistência à abrasão e condutividade térmica"],
-          ["Hot-chamber die-casting tips", "High-temperature service up to 1,400 °C", "Substitute for beryllium copper where higher abrasion resistance and thermal conductivity are required"],
+          ["Ponteiras de câmara quente em fundição sob pressão", "Eletrodos para solda de contatos elétricos", "Serviço em alta temperatura até 1.400 °C", "Substituto do cobre-berílio onde se exige maior resistência à abrasão e condutividade térmica"],
+          ["Hot-chamber die-casting tips", "Electrodes for welding electrical contacts", "High-temperature service up to 1,400 °C", "Substitute for beryllium copper where higher abrasion resistance and thermal conductivity are required"],
         ),
         processes: bi(["Metalurgia do pó"], ["Powder metallurgy"]),
       },
