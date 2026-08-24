@@ -29,11 +29,20 @@ export async function ProductGrid({ limit }: { limit?: number }) {
             <div className="p-5">
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-bronze-500">
                 {family.alloys.length}{" "}
-                {locale === "pt" ? "ligas" : "alloys"}
+                {locale === "pt"
+                  ? family.alloys.length === 1
+                    ? "liga"
+                    : "ligas"
+                  : family.alloys.length === 1
+                    ? "alloy"
+                    : "alloys"}
               </span>
               <h3 className="mt-2 text-lg font-semibold text-ink leading-snug">
                 {family.name[locale]}
               </h3>
+              <p className="mt-2 font-mono text-xs font-semibold tracking-wide text-bronze-600">
+                {family.alloys.map((a) => a.code).join(" · ")}
+              </p>
               <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                 {family.summary[locale]}
               </p>

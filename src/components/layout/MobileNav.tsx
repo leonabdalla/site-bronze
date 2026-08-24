@@ -81,10 +81,13 @@ export function MobileNav() {
               <Link
                 key={f.slug}
                 href={{ pathname: "/produtos/[slug]", params: { slug: f.slug } }}
-                className="border-t border-slate-200 py-3 text-sm text-ink hover:text-bronze-500"
+                className="block border-t border-slate-200 py-3 text-sm text-ink hover:text-bronze-500"
                 onClick={() => setOpen(false)}
               >
-                {f.name[locale]}
+                <span className="block">{f.name[locale]}</span>
+                <span className="mt-0.5 block font-mono text-xs font-semibold tracking-wide text-bronze-600">
+                  {f.alloys.map((a) => a.code).join(" · ")}
+                </span>
               </Link>
             ))}
           </div>

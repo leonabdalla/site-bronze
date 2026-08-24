@@ -65,7 +65,10 @@ export function ProductsMenu() {
               onClick={() => setOpen(false)}
             >
               <span className="block font-medium">{f.name[locale]}</span>
-              <span className="block text-xs text-slate-500">{f.summary[locale]}</span>
+              <span className="mt-0.5 block font-mono text-xs font-semibold tracking-wide text-bronze-600">
+                {f.alloys.map((a) => a.code).join(" · ")}
+              </span>
+              <span className="mt-1 block text-xs text-slate-500">{f.summary[locale]}</span>
             </Link>
           ))}
         </div>
