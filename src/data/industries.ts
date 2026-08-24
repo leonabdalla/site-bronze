@@ -42,8 +42,8 @@ export const industries: Industry[] = [
     },
     image: "/images/industries/offshore.jpg",
     relatedFamilies: [
-      "ligas-de-bronze-aluminio",
       "ligas-de-bronze-aluminio-niquel",
+      "ligas-de-cobre-berilio",
     ],
   },
   {
@@ -70,6 +70,7 @@ export const industries: Industry[] = [
     relatedFamilies: [
       "ligas-de-cobre-cromo-zirconio",
       "ligas-de-cobre-cromo-niquel-silicio",
+      "ligas-de-cobre-niquel-berilio",
     ],
   },
   {
@@ -83,7 +84,7 @@ export const industries: Industry[] = [
     relatedFamilies: [
       "ligas-de-cobre-berilio",
       "ligas-de-cobre-cromo-niquel-silicio",
-      "ligas-de-cobre-cromo-zirconio",
+      "ligas-de-cobre-niquel-berilio",
     ],
   },
   {
