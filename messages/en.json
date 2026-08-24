@@ -58,20 +58,19 @@
   },
   "company": {
     "title": "About Bronze Metal",
-    "lead": "Founded in 1980, Bronze Metal supplies technical bronze and copper alloys to industries at home and abroad, focused on performance, precision, and engineering support.",
-    "missionTitle": "Mission",
-    "mission": "Deliver alloys and technical support that enable critical engineering projects, with certified quality and reliable lead times.",
+    "lead": "Founded in 1980, Bronze Metal supplies specialty bronze and copper alloys to industries at home and abroad, focused on performance, precision, and technical support. We sell both raw and machined parts. Ready stock available in Brazil.",
+    "missionTitle": "Purpose",
+    "mission": "To bring real productivity and efficiency gains, as well as better cost-effectiveness, to companies in the metalworking sector, through innovative, high-quality non-ferrous materials and technical expertise.",
     "visionTitle": "Vision",
-    "vision": "To be the Latin American reference for specialty bronze and copper alloys.",
+    "vision": "To make companies more competitive both in Brazil and worldwide, enabling the manufacture of complex parts and equipment through the supply of high-quality materials.",
     "valuesTitle": "Values",
     "values": [
-      "Metallurgical excellence",
-      "Commitment to deadlines",
-      "Technical transparency",
-      "Long-term partnership"
+      "Ethics",
+      "Quality",
+      "Respect"
     ],
-    "capabilitiesTitle": "Production capabilities",
-    "capabilities": "Solid bars, bushings, and cast profiles in specialty alloys. Bushing diameters up to 3,600 mm. Support for SAE, ASTM, AMS, and UNS specifications."
+    "capabilitiesTitle": "Ready stock",
+    "capabilities": "Solid bars, bushings, and rectangular parts in specialty alloys. Lengths up to 3,600 mm. Machined parts and technical support on demand. We work to SAE, ASTM, AMS, UNS, and other standards."
   },
   "products": {
     "indexTitle": "Alloy families",

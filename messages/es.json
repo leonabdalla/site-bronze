@@ -58,20 +58,19 @@
   },
   "company": {
     "title": "Acerca de Bronze Metal",
-    "lead": "Fundada en 1980, Bronze Metal es proveedora de aleaciones técnicas de bronce y cobre para la industria nacional e internacional, con foco en desempeño, precisión y soporte de ingeniería.",
-    "missionTitle": "Misión",
-    "mission": "Entregar aleaciones y soporte técnico que viabilicen proyectos críticos de ingeniería, con calidad certificada y plazos confiables.",
+    "lead": "Fundada en 1980, Bronze Metal es proveedora de aleaciones especiales de bronce y cobre para la industria nacional e internacional, con foco en desempeño, precisión y soporte técnico. Trabajamos con la venta de piezas brutas y mecanizadas. Stock de entrega inmediata en Brasil.",
+    "missionTitle": "Propósito",
+    "mission": "Aportar un aumento real de productividad y eficiencia, así como una mejor relación costo-beneficio, a las empresas del sector metalmecánico, a través de materiales no ferrosos y conocimiento técnico innovadores y de alta calidad.",
     "visionTitle": "Visión",
-    "vision": "Ser referencia latinoamericana en aleaciones especiales de bronce y cobre.",
+    "vision": "Hacer que las empresas sean más competitivas tanto en Brasil como en el mundo, posibilitando la fabricación de piezas y equipos complejos mediante el suministro de materiales de alta calidad.",
     "valuesTitle": "Valores",
     "values": [
-      "Excelencia metalúrgica",
-      "Compromiso con los plazos",
-      "Transparencia técnica",
-      "Alianza a largo plazo"
+      "Ética",
+      "Calidad",
+      "Respeto"
     ],
-    "capabilitiesTitle": "Capacidad productiva",
-    "capabilities": "Barras macizas, bujes y perfiles fundidos en aleaciones especiales. Diámetros hasta 3.600 mm para bujes. Soporte para especificaciones SAE, ASTM, AMS y UNS."
+    "capabilitiesTitle": "Stock de entrega inmediata",
+    "capabilities": "Barras macizas, bujes y piezas rectangulares en aleaciones especiales. Longitud de hasta 3.600 mm. Piezas mecanizadas y soporte técnico bajo demanda. Trabajamos con las normas SAE, ASTM, AMS, UNS, entre otras."
   },
   "products": {
     "indexTitle": "Familias de aleaciones",
