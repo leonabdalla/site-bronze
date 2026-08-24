@@ -60,8 +60,16 @@ export default async function ProductFamilyPage({
               <span aria-hidden> · </span>
               <span className="text-ink">{family.name[loc]}</span>
             </nav>
-            <h1 className="mt-4 text-balance font-mono text-4xl font-semibold tracking-tight text-bronze-600 md:text-5xl">
-              {family.alloys.map((a) => a.code).join(" · ")}
+            <h1
+              className={
+                family.alloys.length > 1
+                  ? "mt-4 flex flex-col font-mono text-2xl font-semibold tracking-tight text-bronze-600 md:text-3xl"
+                  : "mt-4 text-balance font-mono text-4xl font-semibold tracking-tight text-bronze-600 md:text-5xl"
+              }
+            >
+              {family.alloys.length > 1
+                ? family.alloys.map((a) => <span key={a.code}>{a.code}</span>)
+                : family.alloys[0].code}
             </h1>
             <p className="mt-2 text-lg font-medium text-slate-500">
               {family.name[loc]}
