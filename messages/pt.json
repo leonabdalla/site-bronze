@@ -58,20 +58,19 @@
   },
   "company": {
     "title": "Sobre a Bronze Metal",
-    "lead": "Fundada em 1980, a Bronze Metal é fornecedora de ligas técnicas de bronze e cobre para a indústria nacional e internacional, com foco em desempenho, precisão e suporte de engenharia.",
-    "missionTitle": "Missão",
-    "mission": "Entregar ligas e suporte técnico que viabilizem projetos críticos de engenharia, com qualidade certificada e prazos confiáveis.",
+    "lead": "Fundada em 1980, a Bronze Metal é fornecedora de ligas especiais de bronze e cobre para a indústria nacional e internacional, com foco em desempenho, precisão e suporte técnico. Trabalhamos com a venda de peças brutas e usinadas. Estoque a pronta entrega no Brasil.",
+    "missionTitle": "Propósito",
+    "mission": "Trazer um aumento de produtividade e eficiência real, assim como um custo-benefício melhor para as empresas do setor metal mecânico, através de materiais não ferrosos e conhecimento técnico inovadores e de alta qualidade.",
     "visionTitle": "Visão",
-    "vision": "Ser referência latino-americana em ligas especiais de bronze e cobre.",
+    "vision": "Tornar as empresas mais competitivas tanto no Brasil quanto no mundo e possibilitar a fabricação de peças e equipamentos complexos, através do fornecimento de materiais de alta qualidade.",
     "valuesTitle": "Valores",
     "values": [
-      "Excelência metalúrgica",
-      "Compromisso com prazo",
-      "Transparência técnica",
-      "Parceria de longo prazo"
+      "Ética",
+      "Qualidade",
+      "Respeito"
     ],
-    "capabilitiesTitle": "Capacidade produtiva",
-    "capabilities": "Barras maciças, buchas e perfis fundidos em ligas especiais. Diâmetros até 3.600 mm para buchas. Suporte para especificações SAE, ASTM, AMS e UNS."
+    "capabilitiesTitle": "Estoque a pronta entrega",
+    "capabilities": "Barras maciças, buchas e peças retangulares em ligas especiais. Comprimento de até 3.600 mm. Peças usinadas e suporte técnico sob demanda. Trabalhamos com as normas SAE, ASTM, AMS, UNS, entre outras."
   },
   "products": {
     "indexTitle": "Famílias de ligas",
