@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow";
 import { LinkButton } from "@/components/ui/Button";
 import { AlloyGallery } from "@/components/marketing/AlloyGallery";
+import { ProductJsonLd } from "@/components/seo/ProductJsonLd";
 import { Link } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { alloyBySlug, alloyKey, productFamilies, type PropertyRow } from "@/data/products";
@@ -66,8 +67,15 @@ export default async function AlloyPage({
   const otherAlloys = family.alloys.filter((a) => a.slug !== alloyData.slug);
   const gallery = getAlloyGallery(alloyData.slug);
 
+  const productsSegment = locale === "en" ? "products" : locale === "es" ? "productos" : "produtos";
+  const path =
+    locale === "pt"
+      ? `/${productsSegment}/${slug}/${alloy}`
+      : `/${locale}/${productsSegment}/${slug}/${alloy}`;
+
   return (
     <>
+      <ProductJsonLd alloy={alloyData} family={family} loc={loc} path={path} images={gallery} />
       <section className="border-b border-slate-200 bg-paper-soft py-16 md:py-20">
         <Container>
           <nav className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500" aria-label="Breadcrumb">
