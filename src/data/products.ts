@@ -270,8 +270,8 @@ export const productFamilies: ProductFamily[] = [
         astm: ["ASTM B150"],
         ams: ["AMS 4880"],
         description: {
-          pt: "Bronze-alumínio-níquel fundido de alta resistência mecânica e excelente desempenho em moldes para vidro, peças de aeronaves, engrenagens helicoidais e buchas de cargas elevadas.",
-          en: "High-strength cast nickel-aluminum bronze with excellent performance in glass molds, aircraft parts, helical gears, and high-load bushings.",
+          pt: "Bronze-alumínio-níquel forjado, centrifugado ou fundido de alta resistência mecânica e excelente desempenho em moldes para vidro, peças de aeronaves, engrenagens helicoidais e buchas de cargas elevadas.",
+          en: "Forged, centrifugally cast, or cast nickel-aluminum bronze with high mechanical strength and excellent performance in glass molds, aircraft parts, helical gears, and high-load bushings.",
         },
         image: "/images/alloys/bm-955.png",
         composition: [
@@ -305,8 +305,8 @@ export const productFamilies: ProductFamily[] = [
         ams: ["AMS 4640"],
         otherStandards: ["MAS 4880"],
         description: {
-          pt: "Bronze-alumínio-níquel forjado com alta resistência à fadiga e a ambientes corrosivos, com propriedades antifaísca para áreas explosivas.",
-          en: "Wrought nickel-aluminum bronze with high fatigue and corrosion resistance, plus non-sparking properties for explosive areas.",
+          pt: "Bronze-alumínio-níquel extrudado com alta resistência à fadiga e a ambientes corrosivos, com propriedades antifaísca para áreas explosivas.",
+          en: "Extruded nickel-aluminum bronze with high fatigue and corrosion resistance, plus non-sparking properties for explosive areas.",
         },
         image: "/images/alloys/bm-630.png",
         composition: [
